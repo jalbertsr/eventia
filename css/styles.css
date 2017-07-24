@@ -2,4 +2,9 @@ header div {
   height: 120px;
   background-color: green; }
 
+.search {
+  height: 120px;
+  margin-top: 80px;
+  margin-bottom: 30px; }
+
 /*# sourceMappingURL=styles.css.map */
