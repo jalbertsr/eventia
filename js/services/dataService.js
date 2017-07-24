@@ -1,13 +1,13 @@
 angular.module('tickets-app')
-    .factory('dataService', function ($http) {  	
-        var apiKey = 'xxxxxxxxxxxxxx'
+    .factory('dataService', function ($http) {
+      var apiKey = 'bYHVec5iZZLcVLX9LTAK3Ipovub0RRvD'
 
-        function getNowPlaying () {
-          var url = 'https://api.themoviedb.org/3/movie/now_playing?api_key=' + apiKey
-          return $http.get(url)
-        }
+      function getKeywordSearchPlaying (keyword) {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=' + keyword + '&apikey=' + apiKey
+        return $http.get(url)
+      }
 
-        return {
-          getNowPlaying: getNowPlaying,
-        }
+      return {
+        getKeywordSearchPlaying: getKeywordSearchPlaying
+      }
     })
