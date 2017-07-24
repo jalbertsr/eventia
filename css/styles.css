@@ -1,6 +1,7 @@
 header div {
   height: 120px;
-  background-color: green;
+  background-color: black;
+  color: white;
 }
 
 .search {
@@ -10,5 +11,15 @@ header div {
 }
 
 .events {
-  background-color: gray;
+  background-color: black;
+}
+
+.footer {
+  height: 150px;
+  background-color: black;
+  color: white;
+}
+
+body {
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
