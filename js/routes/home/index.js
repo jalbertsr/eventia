@@ -1,4 +1,4 @@
-angular.module('angularMovies')
+angular.module('tickets-app')
 .config(function($routeProvider){
 	$routeProvider
 	.when('/',{

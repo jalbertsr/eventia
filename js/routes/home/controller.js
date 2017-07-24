@@ -1,17 +1,17 @@
-angular.module('angularMovies')
+angular.module('tickets-app')
     .controller('homeController', function($scope, $rootScope, dataService) {
 
-        $scope.getQuery = function() {
-            var query = $scope.film
-            console.log(query)
-            $rootScope.$broadcast('queryReady', { query: query })
+        $scope.getKeyword = function() {
+            var keyword = $scope.event
+            console.log(keyword)
+            $rootScope.$broadcast('keywordReady', { keyword: keyword })
         }
 
-        $scope.$on('queryReady', function(e, data) {
-            dataService.getFilms(data.query)
+        $scope.$on('keywordReady', function(e, data) {
+            dataService.getKeywordSearch(data.keyword)
                 .then(function(response) {
                     console.log(response)
-                    $scope.films = response.data.results
+                    $scope.films = response.data
                 })
         })
     })
