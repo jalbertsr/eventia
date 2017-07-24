@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="tickets-app">
+<head>
+	<title>Movies App</title>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body> 
+
+	<ng-view></ng-view>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- ANGULAR 1.6.3 -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+
+    <!-- ANGULAR ROUTE -->
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script> 
+
+	<!-- MAIN MODULE -->
+    <script type="text/javascript" src="app.js"></script>
+
+     <!-- SERVICES -->
+    <script type="text/javascript" src="js/services/dataService.js"></script>
+
+    <!-- ROUTE/home -->
+    <script type="text/javascript" src="js/routes/home/controller.js"></script>
+    <script type="text/javascript" src="js/routes/home/index.js"></script>
+    <!-- ROUTE/nowPlaying -->
+    <script type="text/javascript" src="js/routes/nowPlaying/controller.js"></script>
+    <script type="text/javascript" src="js/routes/nowPlaying/index.js"></script>
+    <!-- ROUTE/Popular -->
+    <script type="text/javascript" src="js/routes/popular/controller.js"></script>
+    <script type="text/javascript" src="js/routes/popular/index.js"></script>
+    <!-- ROUTE/topRated -->
+    <script type="text/javascript" src="js/routes/topRated/controller.js"></script>
+    <script type="text/javascript" src="js/routes/topRated/index.js"></script> 
+    <!-- ROUTE/upcoming -->
+    <script type="text/javascript" src="js/routes/upcoming/controller.js"></script>
+    <script type="text/javascript" src="js/routes/upcoming/index.js"></script> 
+</body>
+</html>

@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="title">
+   		<h1 class=" title col-md-offset-5 col-md-7">Movies App</h1>
+        <form>
+            <div class="input-group col-md-offset-3 col-md-6">
+                <input ng-model="film" type="text" class="form-control" placeholder="Search for your favourite film...">
+                <span class="input-group-btn">
+	       			 <button ng-click="getQuery()" class="btn btn-default" type="button">Search!</button>
+	      		</span>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div ng-repeat="film in films" class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img ng-src="https://image.tmdb.org/t/p/w500{{film.poster_path}}" alt="{{film.title}}">
+            <div class="caption">
+                <h3>{{film.title}}</h3>
+                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#{{ film.id }}">Info</button>
+                <div class="modal fade film-modal" id="{{ film.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">{{ film.title }}</h4>
+                            </div>
+                            <div class="modal-body row">
+                                <img class="col-md-6" ng-src="https://image.tmdb.org/t/p/w500{{ film.poster_path }}" alt="film-image"></img>
+                                <ul class="col-md-6 modal-list list-unstyled">
+                                    <li><strong>Synopsis :</strong> {{film.overview}}</li>
+                                    <li><strong>Release date :</strong> {{film.release_date}}.</li>
+                                    <li><strong>Rating :</strong> {{film.vote_average/2}}/ 
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <li>
+                                    <li>
+                                        <a ng-href="https://www.youtube.com/watch?v={{url}}" target="_blank"><button class="btn btn-default">See trailer</button></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="position:fixed">
+    <div class="wrapper">
+        <p>Made with <span class="fa fa-heart footer-icon"></span> by <a target="_blank" href="https://github.com/jalbertsr">Joan Albert</a></p>
+    </div>
+</footer>

@@ -1,0 +1,44 @@
+<div class="row">
+    <h1 class="title col-md-offset-5 col-md-7">Now Playing</h1>
+    <div ng-repeat="film in films" class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+            <img ng-src="https://image.tmdb.org/t/p/w500{{film.poster_path}}" alt="{{film.title}}">
+            <div class="caption">
+                <h3>{{film.title}}</h3>
+                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#{{ film.id }}">Info</button>
+                <div class="modal fade film-modal" id="{{ film.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">{{ film.title }}</h4>
+                            </div>
+                            <div class="modal-body row">
+                                <img class="col-md-6" ng-src="https://image.tmdb.org/t/p/w500{{ film.poster_path }}" alt="film-image"></img>
+                                <ul class="col-md-6 modal-list list-unstyled">
+                                    <li><strong>Synopsis :</strong> {{film.overview}}</li>
+                                    <li><strong>Release date :</strong> {{film.release_date}}.</li>
+                                    <li><strong>Rating :</strong> {{film.vote_average/2}}/ 
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="wrapper">
+        <p>Made with <span class="fa fa-heart footer-icon"></span> by <a target="_blank" href="https://github.com/jalbertsr">Joan Albert</a></p>
+    </div>
+</footer>
