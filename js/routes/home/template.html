@@ -2,10 +2,10 @@
     <div class="row" ng-controller="searchController">
         <div class="col-lg-10 col-md-offset-1 col-lg-offset-1 col-md-10 search">
             <div class="input-group inputSearch">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input ng-model="keyword" type="text" class="form-control" placeholder="Search for...">
                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">Go!</button>
-                               </span>
+                    <button ng-click="getKeyword()" class="btn btn-default" type="button">Go!</button>
+                </span>
             </div>
         </div>
     </div>
@@ -19,11 +19,11 @@
         </div>
         <div class="container row">
             <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/KW_2_Pyshma.jpg/300px-KW_2_Pyshma.jpg" alt="...">
+                <div class="thumbnail" ng-repeat="event in events">
+                    <img class="img-responsive" ng-src="{{event.images[1].url}}">
                     <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p> a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h3>{{event.name}}</h3>
+                        <p>{{evnet.pleaseNote}}</p>
                         <p><a href="#" class="btn btn-default" role="button">Button</a></p>
                     </div>
                 </div>
