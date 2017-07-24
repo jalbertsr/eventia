@@ -1,12 +1,73 @@
-<div class="row">
-    <form class="box-search col-md-6 col-md-offset-3" role="form">
-    <div class="col-lg-6">
-        <div class="input-group">
-            <input ng-model="event" type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-        <button ng-click="getKeyword()" class="btn btn-default" type="button">Go!</button>
-      </span>
+<div class="container">
+    <div class="row" ng-controller="searchController">
+        <div class="col-lg-10 col-md-offset-1 col-lg-offset-1 col-md-10 search">
+            <div class="input-group inputSearch">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Go!</button>
+                               </span>
+            </div>
         </div>
     </div>
-    </form>
 </div>
+<!-- @begin principal container -->
+<div class="container">
+    <!-- start of Daily -->
+    <div class="events" ng-controller="dailyController">
+        <div>
+            <h1>DAILY</h1>
+        </div>
+        <div class="container row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/KW_2_Pyshma.jpg/300px-KW_2_Pyshma.jpg" alt="...">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p> a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p><a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of Daily -->
+    <!-- start of Popular -->
+    <div class="events" ng-controller="popularController">
+        <div>
+            <h1>POPULAR</h1>
+        </div>
+        <div class="container row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/KW_2_Pyshma.jpg/300px-KW_2_Pyshma.jpg" alt="...">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p> a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p><a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of Popular -->
+    <!-- start of Relevant -->
+    <div class="events" ng-controller="relevantController">
+        <div>
+            <h1>RELEVANT</h1>
+        </div>
+        <div class="container row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/KW_2_Pyshma.jpg/300px-KW_2_Pyshma.jpg" alt="...">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p> a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p><a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of Relevant -->
+</div>
+<!-- @end principal container -->

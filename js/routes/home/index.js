@@ -3,6 +3,6 @@ angular.module('tickets-app')
 	$routeProvider
 	.when('/',{
 		templateUrl : 'js/routes/home/template.html',
-		controller : 'homeController'
+		controller : 'searchController', 'dailyController', 'popularController', 'relevantController'
 	})
 })
