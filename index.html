@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html ng-app="tickets-app">
+
 <head>
-	<title>Movies App</title>
-
-	<meta charset="utf-8">
+    <title>Movies App</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
+<<<<<<< HEAD
 <body> 
     {{4+2}}
 	<ng-view></ng-view>
+=======
+>>>>>>> 79f8b33e4f8aef108f56a78a90faefaad9e95449
 
+<body>
+<!-- @begin principal container -->
+<div class="container"> 
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#!/">Tickets App</a>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#!/musica">Música</a>
+                    </li>
+                    <li>
+                        <a href="#!/arte-y-teatro">Arte y Teatro</a>
+                    </li>
+                    <li>
+                        <a href="#!/festivales">Festivales</a>
+                    </li>
+                    <li>
+                        <a href="#!/deporte">Deporte</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <ng-view></ng-view>
+</div> <!-- @end principal container -->
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-
     <!-- BOOTSTRAP -->
     <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
-
     <!-- ANGULAR 1.6.3 -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <!-- ANGULAR ROUTE -->
-     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script> 
-
-	<!-- MAIN MODULE -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
+    <!-- MAIN MODULE -->
     <script type="text/javascript" src="app.js"></script>
-
-     <!-- SERVICES -->
+    <!-- SERVICES -->
     <script type="text/javascript" src="js/services/dataService.js"></script>
-
     <!-- ROUTE/home -->
     <script type="text/javascript" src="js/routes/home/controller.js"></script>
     <script type="text/javascript" src="js/routes/home/index.js"></script>
@@ -43,9 +65,10 @@
     <script type="text/javascript" src="js/routes/popular/index.js"></script>
     <!-- ROUTE/topRated -->
     <script type="text/javascript" src="js/routes/topRated/controller.js"></script>
-    <script type="text/javascript" src="js/routes/topRated/index.js"></script> 
+    <script type="text/javascript" src="js/routes/topRated/index.js"></script>
     <!-- ROUTE/upcoming -->
     <script type="text/javascript" src="js/routes/upcoming/controller.js"></script>
-    <script type="text/javascript" src="js/routes/upcoming/index.js"></script> 
+    <script type="text/javascript" src="js/routes/upcoming/index.js"></script>
 </body>
+
 </html>
