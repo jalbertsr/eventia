@@ -9,66 +9,97 @@
     <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<<<<<<< HEAD
-<body> 
-    {{4+2}}
-	<ng-view></ng-view>
-=======
->>>>>>> 79f8b33e4f8aef108f56a78a90faefaad9e95449
 
 <body>
-<!-- @begin principal container -->
-<div class="container"> 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- <ng-view></ng-view> -->
+
+    <body>
+        <header>
+            <div></div>
+        </header>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <a class="navbar-brand" href="#!/">Tickets App</a>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#!/musica">Música</a>
+                        </li>
+                        <li>
+                            <a href="#!/arte-y-teatro">Arte y Teatro</a>
+                        </li>
+                        <li>
+                            <a href="#!/festivales">Festivales</a>
+                        </li>
+                        <li>
+                            <a href="#!/deporte">Deporte</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- @begin principal container -->
         <div class="container">
-            <a class="navbar-brand" href="#!/">Tickets App</a>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#!/musica">Música</a>
-                    </li>
-                    <li>
-                        <a href="#!/arte-y-teatro">Arte y Teatro</a>
-                    </li>
-                    <li>
-                        <a href="#!/festivales">Festivales</a>
-                    </li>
-                    <li>
-                        <a href="#!/deporte">Deporte</a>
-                    </li>
-                </ul>
+            <div class=“col-lg-6”>
+                <div class=“search input-group”>
+                    <input type=“text” class=“form-control” placeholder=“Search for...“>
+                    <span class=“input-group-btn”>
+                        <button class=“btn btn-default” type=“button”>Go!</button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </div>
+            <div>
+                <div class="container row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="..." alt="...">
+                            <div class="caption">
+                                <h3>Thumbnail label</h3>
+                                <p> a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="..." alt="...">
+                            <div class="caption">
+                                <h3>Thumbnail label</h3>
+                                <p> a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="..." alt="...">
+                            <div class="caption">
+                                <h3>Thumbnail label</h3>
+                                <p> a commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-    <ng-view></ng-view>
-</div> <!-- @end principal container -->
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <!-- BOOTSTRAP -->
-    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
-    <!-- ANGULAR 1.6.3 -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-    <!-- ANGULAR ROUTE -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
-    <!-- MAIN MODULE -->
-    <script type="text/javascript" src="app.js"></script>
-    <!-- SERVICES -->
-    <script type="text/javascript" src="js/services/dataService.js"></script>
-    <!-- ROUTE/home -->
-    <script type="text/javascript" src="js/routes/home/controller.js"></script>
-    <script type="text/javascript" src="js/routes/home/index.js"></script>
-    <!-- ROUTE/nowPlaying -->
-    <script type="text/javascript" src="js/routes/nowPlaying/controller.js"></script>
-    <script type="text/javascript" src="js/routes/nowPlaying/index.js"></script>
-    <!-- ROUTE/Popular -->
-    <script type="text/javascript" src="js/routes/popular/controller.js"></script>
-    <script type="text/javascript" src="js/routes/popular/index.js"></script>
-    <!-- ROUTE/topRated -->
-    <script type="text/javascript" src="js/routes/topRated/controller.js"></script>
-    <script type="text/javascript" src="js/routes/topRated/index.js"></script>
-    <!-- ROUTE/upcoming -->
-    <script type="text/javascript" src="js/routes/upcoming/controller.js"></script>
-    <script type="text/javascript" src="js/routes/upcoming/index.js"></script>
-</body>
+        <!-- @end principal container -->
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+        <!-- ANGULAR 1.6.3 -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+        <!-- ANGULAR ROUTE -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
+        <!-- MAIN MODULE -->
+        <script type="text/javascript" src="app.js"></script>
+        <!-- SERVICES -->
+        <script type="text/javascript" src="js/services/dataService.js"></script>
+        <!-- ROUTE/home -->
+        <script type="text/javascript" src="js/routes/home/controller.js"></script>
+        <script type="text/javascript" src="js/routes/home/index.js"></script>
+    </body>
 
 </html>

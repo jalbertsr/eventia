@@ -8,6 +8,6 @@ angular.module('tickets-app')
       }
 
       return {
-        getKeywordSearchPlaying: getKeywordSearchPlaying
+        getKeywordSearch: getKeywordSearch
       }
     })
