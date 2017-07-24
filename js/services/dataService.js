@@ -7,8 +7,8 @@ angular.module('tickets-app')
         return $http.get(url)
       }
 // JOAN ALBERT
-      function getDaily () {
-        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=' + +'&apikey=' + apiKey
+      function getDaily (date) {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?startDateTime=' + date + '&apikey=' + apiKey
         return $http.get(url)
       }
 // HUMBERTO
