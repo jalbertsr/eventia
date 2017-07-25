@@ -10,29 +10,32 @@
             </div>
             <div class="container col-xs-12 col-sm-6">
                 <div class="row">
-					<div class="col-xs-6">
+					<div class="col-xs-12">
+						<h3>{{event.name}}</h3>
+					</div>
+					<div class="col-xs-6 miniInfo">
 						<p>Date:</p>
-						<p>{{}}</p>
+						<p>{{eventInformation[0].localDate}}</p>
 					</div>
-					<div class="col-xs-6">
+					<div class="col-xs-6 miniInfo">
 						<p>Time:</p>
-						<p>{{}}</p>
+						<p>{{eventInformation[0].localTime}}</p>
 					</div>
-					<div class="col-xs-6">
-						<p>Sale dates:</p>
-						<p>{{}}</p>
+					<div class="col-xs-6 miniInfo">
+						<p>Sales:</p>
+						<p>{{eventInformation[0].salesStart}}</p>
+						<p>{{eventInformation[0].salesEnd}}</p>
 					</div>
-					<div class="col-xs-6">
-						<p>Box Ofice Info:</p>
-						<p>{{}}</p>
+					<div class="col-xs-6 miniInfo">
+						<p></p>
 					</div>
-					<div class="col-xs-6">
-						<p>Status:</p>
+					<div class="col-xs-6 miniInfo">
+						<p>Ticket Status:</p>
 						<p>{{event.dates.status.code}}</p>
 					</div>
-					<div class="col-xs-6">
+					<div class="col-xs-6 miniInfo">
 						<p>Prize Range:</p>
-						<p>{{event.priceRanges["0"].max}}$ - {{event.priceRanges["0"].min}}$</p>
+						<p>{{event.priceRanges["0"].min}}$ - {{event.priceRanges["0"].max}}$</p>
 					</div>
                 </div>
             </div>

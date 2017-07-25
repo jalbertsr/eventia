@@ -1,11 +1,36 @@
 angular.module('tickets-app')
   .controller('DetailsEventController', function ($scope, $routeParams, dataService) {
     var idEvent = $routeParams.id
+    $scope.eventInformation = []
     console.log(idEvent)
     dataService.getEvent(idEvent)
         .then(function (response) {
           $scope.event = response.data
+          var localDate = response.data.dates.start.localDate.split('-')
+          var date = localDate[2] + '/' + localDate[1] + '/' + localDate[0]
+          var localTime = response.data.dates.start.localTime.split(':', 2)
+          var time = localTime[0] + ':' + localTime[1]
+          var startDateSales1 = response.data.sales.public.startDateTime.split('-')
+          var startDateSales2 = startDateSales1[2].split('T', 1)
+          var startDateSalesFinal = 'Opens: ' + startDateSales2 + '/' + startDateSales1[1] + '/' + startDateSales1[0] + ' at '
+          var startHourSales1 = response.data.sales.public.startDateTime.split(':')
+          var startHourSales2 = startHourSales1[0].split('T')
+          var startHourSalesFinale = startHourSales2[1] + ':' + startHourSales1[1]
 
+          var endDateSales1 = response.data.sales.public.endDateTime.split('-')
+          var endDateSales2 = endDateSales1[2].split('T', 1)
+          var endDateSalesFinal = 'Closes: ' + endDateSales2 + '/' + endDateSales1[1] + '/' + endDateSales1[0] + ' at '
+          var endHourSales1 = response.data.sales.public.endDateTime.split(':')
+          var endHourSales2 = endHourSales1[0].split('T')
+          var endHourSalesFinale = endHourSales2[1] + ':' + endHourSales1[1]
+          console.log(endHourSalesFinale)
           console.log(response)
+
+          $scope.eventInformation.push({
+          	localDate: date,
+          	localTime: time,
+          	salesStart: startDateSalesFinal + startHourSalesFinale,
+          	salesEnd: endDateSalesFinal + endHourSalesFinale
+          })
         })
   })
