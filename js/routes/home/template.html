@@ -23,7 +23,9 @@
                     <img class="img-responsive" ng-src="{{event.images[4].url}}">
                     <div class="caption">
                         <h3>{{event.name}}</h3>
-                        <p><a ng-href="#!/event/{{ event.id }}" class="btn btn-default" role="button">Button</a></p>
+                        <p>{{event.pleaseNote}}</p>
+                        <p><a ng-href="#!/event/{{event.id}}" class="btn btn-default" role="button">Button</a></p>
+
                     </div>
                 </div>
             </div>

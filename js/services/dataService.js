@@ -22,7 +22,7 @@ angular.module('tickets-app')
       }
 
        function getEvent (idEvent) {
-        var url = 'https://app.ticketmaster.com/discovery/v2/events/' + idEvent + '.json?apikey=' + apikey
+        var url = 'https://app.ticketmaster.com/discovery/v2/events/' + idEvent + '.json?apikey=' + apiKey
         return $http.get(url)
       }
 

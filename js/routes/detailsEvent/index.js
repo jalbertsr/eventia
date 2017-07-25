@@ -1,5 +1,5 @@
 angular.module('tickets-app')
-  .config(function($routeProvider) {
+  .config(function( $routeProvider ) {
 
     $routeProvider
       .when('/event/:id', {
