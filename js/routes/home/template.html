@@ -32,7 +32,25 @@
     </div>
     <!-- end of Daily -->
     <!-- start of Popular -->
+
     <div class="events" ng-controller="popularController">
+        <div>
+            <h1>Popular</h1>
+        </div>
+        <div class="container row">
+            <div class="col-sm-6 col-md-3" ng-repeat="event in events">
+                <div class="thumbnail" >
+                    <img class="img-responsive" ng-src="{{event.images[1].url}}">
+                    <div class="caption">
+                        <h3>{{event.name}}</h3>
+                        <p>{{event.pleaseNote}}</p>
+                        <p><a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="events" ng-controller="popularController">
         <div>
             <h1>POPULAR</h1>
         </div>
@@ -48,7 +66,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end of Popular -->
     <!-- start of Relevant -->
    <!--  <div class="events" ng-controller="relevantController">

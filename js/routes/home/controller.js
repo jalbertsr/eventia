@@ -16,15 +16,15 @@ angular.module('tickets-app')
       date = date.shift() + 'Z'
       dataService.getDaily(date)
                 .then(function (response) {
-                  console.log(response)
+                  // console.log(response)
                   var completeEvents = response.data._embedded.events
-                  console.log(completeEvents)
+                  // console.log(completeEvents)
                   $scope.events = completeEvents.slice(0, 4)
                 })
       // }
     })
 
-    .controller('dailyController', function ($scope, $rootScope, dataService) {
+    .controller('popularController', function ($scope, $rootScope, dataService) {
       dataService.getPopular()
                 .then(function (response) {
                   console.log(response)
