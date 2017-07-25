@@ -1,7 +1,19 @@
-header div {
+header {
   height: 120px;
   background-color: black;
-  color: white; }
+  color: white;
+  margin: 0; }
+  header div h1 {
+    margin-top: 0;
+    padding-top: 30px;
+    padding-left: 60px;
+    font-family: 'Bowlby One', cursive;
+    font-size: 70px; }
+
+.navbar-inverse {
+  display: flex;
+  justify-content: center;
+  border-radius: 0px; }
 
 .search {
   height: 120px;
@@ -13,11 +25,27 @@ header div {
   border-radius: 10px;
   padding-top: 20px;
   margin-bottom: 50px; }
+  .events h1 {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    color: white; }
 
-.footer {
+footer {
   height: 150px;
   background-color: black;
   color: white; }
+  footer ul {
+    padding-top: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: center; }
+    footer ul li {
+      display: inline;
+      padding-right: 30px;
+      font-size: 15px;
+      font-weight: bold; }
+      footer ul li a {
+        text-decoration: none; }
 
 body {
   background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%); }

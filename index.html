@@ -6,56 +6,91 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
-        <header>
+    <header>
+        <div>
+            <h1>Eventia</h1>
+        </div>
+    </header>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#!/">Tickets App</a>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#!/musica">Music</a>
+                    </li>
+                    <li>
+                        <a href="#!/arte-y-teatro">Art & Theatre</a>
+                    </li>
+                    <li>
+                        <a href="#!/festivales">Festivals</a>
+                    </li>
+                    <li>
+                        <a href="#!/deporte">Sports</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <ng-view></ng-view>
+    <footer>
+        <div>
+            <div class="footer-content">
+                <ul>
+                    <li>
+                        <a href="#!/musica">Music</a>
+                    </li>
+                    <li>
+                        <a href="#!/arte-y-teatro">Art & Theatre</a>
+                    </li>
+                    <li>
+                        <a href="#!/festivales">Festivals</a>
+                    </li>
+                    <li>
+                        <a href="#!/deporte">Sports</a>
+                    </li>
+                    <li>
+                        <a href="#!/deporte">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#!/deporte">Privacy Politic</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
             <div></div>
-        </header>
-        <nav class="navbar navbar-inverse" role="navigation">
-            <div class="container">
-                <a class="navbar-brand" href="#!/">Tickets App</a>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#!/musica">Música</a>
-                        </li>
-                        <li>
-                            <a href="#!/arte-y-teatro">Arte y Teatro</a>
-                        </li>
-                        <li>
-                            <a href="#!/festivales">Festivales</a>
-                        </li>
-                        <li>
-                            <a href="#!/deporte">Deporte</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <ng-view></ng-view>
-        <footer>
-            <div class="footer">
-                <p>Skylab</p>
-            </div>
-        </footer>
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-        <!-- BOOTSTRAP -->
-        <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
-        <!-- ANGULAR 1.6.3 -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-        <!-- ANGULAR ROUTE -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
-        <!-- MAIN MODULE -->
-        <script type="text/javascript" src="app.js"></script>
-        <!-- SERVICES -->
-        <script type="text/javascript" src="js/services/dataService.js"></script>
-        <!-- ROUTE/home -->
-        <script type="text/javascript" src="js/routes/home/controller.js"></script>
-        <script type="text/javascript" src="js/routes/home/index.js"></script>
-    </body>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <!-- ANGULAR 1.6.3 -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <!-- ANGULAR ROUTE -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.min.js"></script>
+    <!-- MAIN MODULE -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- SERVICES -->
+    <script type="text/javascript" src="js/services/dataService.js"></script>
+    <!-- ROUTE/home -->
+    <script type="text/javascript" src="js/routes/home/controller.js"></script>
+    <script type="text/javascript" src="js/routes/home/index.js"></script>
+    <!-- ROUTE/Event -->
+    <script type="text/javascript" src="js/routes/detailsEvent/controller.js"></script>
+    <script type="text/javascript" src="js/routes/detailsEvent/index.js"></script>
+</body>
 
 </html>
