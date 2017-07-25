@@ -12,7 +12,7 @@ angular.module('tickets-app')
       }
 
       function getPopular () {
-        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=' + +'&apikey=' + apiKey
+        var url = 'https://app.ticketmaster.com/discovery/v2/events?sort_by=popularity&apikey=' + apiKey
         return $http.get(url)
       }
 
