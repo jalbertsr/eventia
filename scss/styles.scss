@@ -6,9 +6,10 @@ header {
     div {
         h1 {
             margin-top: 0;
-            padding-top: 30px;
+            padding-top: 40px;
+            padding-bottom: 10px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 70px;
+            font-size: 50px;
         }
     }
 }
@@ -19,7 +20,7 @@ header {
     border-radius: 0px;
 }
 
-// HOME STYLES
+/*----------------------------------------- start home styles -----------------------------------------------------*/
 .search {
     height: 120px;
     margin-top: 80px;
@@ -27,14 +28,16 @@ header {
 }
 
 .events {
-    background-color: black;
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
     padding-top: 10px;
     margin-bottom: 50px;
+    // box-shadow: 2px 2px 5px #888888;
     h1 {
         padding-bottom: 20px;
         padding-left: 20px;
         color: white;
+        font-size: 20px;
     }
 }
 
@@ -55,13 +58,19 @@ footer {
             font-weight: bold;
             a {
                 text-decoration: none;
+                color: #CCC;
+            }
+            a:hover {
+                text-decoration: none;
+                color: #999;
             }
         }
     }
 }
 
 body {
-    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    // background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -107,16 +116,11 @@ body {
         padding-left: 60px;
     }
 }
+/*----------------------------------------- end event styles -----------------------------------------------------*/
 
 
 
-
-
-
-
-
-
-// SEARCH STYLES
+/*----------------------------------------- serach styles -----------------------------------------------------*/
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 body {
@@ -330,13 +334,25 @@ body {
         width: 40px;
         padding: 10px 0px 9px;
     }
+    
+    div.info{
+        a{
+            color: inherit;
+            text-decoration: inherit;
+        }
+    }
 }
+/*----------------------------------------- end serach styles -----------------------------------------------------*/
 
-// EVENTS STYLES
+/*----------------------------------------- start event styles -----------------------------------------------------*/
 .info{
     margin: 10px 0;
     background-color: white;
  }
 
 .miniInfo{
+    
 }
+
+ /*----------------------------------------- end event styles -----------------------------------------------------*/
+

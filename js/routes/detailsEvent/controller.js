@@ -24,13 +24,17 @@ angular.module('tickets-app')
           var endHourSales2 = endHourSales1[0].split('T')
           var endHourSalesFinale = endHourSales2[1] + ':' + endHourSales1[1]
           console.log(endHourSalesFinale)
+
+          $scope.latitude = response.data._embedded.venues['0'].location.latitude
+          $scope.longitude = response.data._embedded.venues['0'].location.longitude
+
           console.log(response)
 
           $scope.eventInformation.push({
-          	localDate: date,
-          	localTime: time,
-          	salesStart: startDateSalesFinal + startHourSalesFinale,
-          	salesEnd: endDateSalesFinal + endHourSalesFinale
+            localDate: date,
+            localTime: time,
+            salesStart: startDateSalesFinal + startHourSalesFinale,
+            salesEnd: endDateSalesFinal + endHourSalesFinale
           })
         })
   })

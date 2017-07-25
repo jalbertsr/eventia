@@ -1,1 +1,1 @@
-angular.module('tickets-app',['ngRoute'])
+angular.module('tickets-app',['ngRoute', 'ngMap'])
