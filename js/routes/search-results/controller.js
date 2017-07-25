@@ -1,6 +1,5 @@
  angular.module('tickets-app')
-  .controller('SearchController', function($scope, $routeParams, dataService) {
-
+  .controller('SearchController', function ($scope, $routeParams, dataService) {
     var keyword = $routeParams.keyword
     console.log(keyword)
 
@@ -22,7 +21,7 @@
     dataService.getKeywordSearch(keyword)
      .then(function(response) {
          console.log(response)
-         $scope.events = response.data
+         $scope.events = response.data._embedded.events
          var localDate = response.data._embedded.events["0"].dates.start.localDate
          var parseMonth = localDate.split('-')[1]
          $scope.month = months[parseMonth]
