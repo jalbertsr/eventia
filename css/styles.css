@@ -17,6 +17,7 @@ header {
   justify-content: center;
   border-radius: 0px; }
 
+/*----------------------------------------- start home styles -----------------------------------------------------*/
 .search {
   height: 120px;
   margin-top: 80px;
@@ -83,6 +84,8 @@ body {
 @media (min-width: 768px) {
   header {
     padding-left: 60px; } }
+/*----------------------------------------- end event styles -----------------------------------------------------*/
+/*----------------------------------------- serach styles -----------------------------------------------------*/
 body {
   background-color: gainsboro; }
 
@@ -267,4 +270,15 @@ body {
   .event-list > li > .social > ul > li > a {
     display: block;
     width: 40px;
-    padding: 10px 0px 9px; } }
+    padding: 10px 0px 9px; }
+
+  div.info a {
+    color: inherit;
+    text-decoration: inherit; } }
+/*----------------------------------------- end serach styles -----------------------------------------------------*/
+/*----------------------------------------- start event styles -----------------------------------------------------*/
+.info {
+  margin: 10px 0;
+  background-color: white; }
+
+/*----------------------------------------- end event styles -----------------------------------------------------*/
