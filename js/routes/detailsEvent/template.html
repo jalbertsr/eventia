@@ -1,44 +1,58 @@
-<p>{{4+6}}</p>
+<!-- <p>{{4+6}}</p> -->
 <div class="container">
-    <div class="container">
+	<!-- Start of imgImportantInfo -->
+    <div class="info container">
         <div class="row">
-            <div class="container col-xs-12 col-md-6">
+            <div class="container col-xs-12 col-sm-6">
                 <div>
-                    <img class="img-responsive" src="https://s1.ticketm.net/dam/a/e5b/5986b68f-9f93-4faa-b781-2f88e2e9fe5b_206641_TABLET_LANDSCAPE_16_9.jpg" alt="">
+                    <img class="img-responsive" src="{{event.images[9].url}}" alt="">
                 </div>
             </div>
-            <div class="container col-xs-12 col-xs-6">
+            <div class="container col-xs-12 col-sm-6">
                 <div class="row">
 					<div class="col-xs-6">
 						<p>Date:</p>
+						<p>{{}}</p>
 					</div>
 					<div class="col-xs-6">
 						<p>Time:</p>
+						<p>{{}}</p>
 					</div>
 					<div class="col-xs-6">
 						<p>Sale dates:</p>
+						<p>{{}}</p>
 					</div>
 					<div class="col-xs-6">
-						<p>Promoter:</p>
+						<p>Box Ofice Info:</p>
+						<p>{{}}</p>
 					</div>
 					<div class="col-xs-6">
 						<p>Status:</p>
+						<p>{{event.dates.status.code}}</p>
 					</div>
 					<div class="col-xs-6">
-						<p>Prize:</p>
+						<p>Prize Range:</p>
+						<p>{{event.priceRanges["0"].max}}$ - {{event.priceRanges["0"].min}}$</p>
 					</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <!-- End of imgImportantInfo -->
+    <!-- Start of infoMap -->
+    <div class="info container">
         <div class="row">
             <div class="container">
-                <div></div>
+                <div class="container col-xs-12 col-sm-7">
+                	<p>{{event.info}}</p>
+                </div>
             </div>
-            <div class="container">
-                <div></div>
+            <div class="container container col-xs-12 col-sm-5">
+                <div>
+                	
+                </div>
             </div>
         </div>
     </div>
+    <!-- End of infoMap -->
 </div>
