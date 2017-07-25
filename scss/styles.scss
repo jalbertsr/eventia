@@ -7,7 +7,6 @@ header {
         h1 {
             margin-top: 0;
             padding-top: 30px;
-            padding-left: 60px;
             font-family: 'Montserrat', sans-serif;
             font-size: 70px;
         }
@@ -70,6 +69,14 @@ body {
     position: relative;
 }
 
+.thumbnail {
+    img {
+        height: 200px;
+        background-size: cover;
+        background-position: center center; 
+    }
+}
+
 
 .caption {
     h3 {
@@ -84,6 +91,22 @@ body {
     margin-bottom: 20px;
 }
 
+@media(max-width: 768px) {
+    header {
+        div {
+            h1 {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    header {
+        padding-left: 60px;
+    }
+}
 
 
 
