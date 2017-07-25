@@ -4,8 +4,8 @@
     console.log(keyword)
 
     var months = {
-    	'1': 'JAN', 
-    	'2': 'FEB', 
+    	'1': 'JAN',
+    	'2': 'FEB',
     	'3': 'MAR',
     	'4': 'APR',
     	'5': 'MAY',
@@ -19,14 +19,13 @@
     }
 
     dataService.getKeywordSearch(keyword)
-     .then(function(response) {
-         console.log(response)
-         $scope.events = response.data._embedded.events
-         var localDate = response.data._embedded.events["0"].dates.start.localDate
-         var parseMonth = localDate.split('-')[1]
-         $scope.month = months[parseMonth]
-         console.log($scope.month)
-
-    })
-
+     .then(function (response) {
+       console.log(response)
+       $scope.events = response.data._embedded.events
+       var localDate = response.data._embedded.events['0'].dates.start.localDate
+       var parseMonth = localDate.split('-')[1]
+       $scope.day = localDate.split('-')[2]
+       $scope.month = months[parseMonth]
+       console.log($scope.month)
+     })
   })

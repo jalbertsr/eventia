@@ -3,10 +3,9 @@
         <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]" ng-repeat="event in events">
             <ul class="event-list">
                 <li>
-                    <time datetime="2014-07-20">
-                        <span class="day">4</span>
-                        <span class="month">Jul</span>
-                        <span class="time">ALL DAY</span>
+                    <time>
+                        <span class="day">{{day}}</span>
+                        <span class="month">{{month}}</span>
                     </time>
                     <img ng-src="{{event.images[0].url}}">
                     <div class="info">

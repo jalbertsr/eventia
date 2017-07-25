@@ -8,7 +8,7 @@ header {
             margin-top: 0;
             padding-top: 30px;
             padding-left: 60px;
-            font-family: 'Bowlby One', cursive;
+            font-family: 'Montserrat', sans-serif;
             font-size: 70px;
         }
     }
@@ -40,6 +40,7 @@ header {
 }
 
 footer {
+    margin-top: 100px;
     height: 150px;
     background-color: black;
     color: white;
@@ -62,10 +63,10 @@ footer {
 
 body {
     background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    font-family: 'Roboto', sans-serif;
 }
 
 .thumbnail {
-    height: 300px;
     position: relative;
 }
 
@@ -78,11 +79,19 @@ body {
     }
 }
 
-.caption {
-    button {
-        position: absolute;
-    }
+.imageContainer {
+    width: 100%;
+    margin-bottom: 20px;
 }
+
+
+
+
+
+
+
+
+
 
 // SEARCH STYLES
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
@@ -110,7 +119,8 @@ body {
     display: inline-block;
     width: 100%;
     color: rgb(255, 255, 255);
-    background-color: rgb(197, 44, 102);
+    background-color: rgb(0, 0, 0);
+    border-right: 3px solid white;
     padding: 5px;
     text-align: center;
     text-transform: uppercase;
@@ -206,7 +216,7 @@ body {
 
 .facebook a,
 .twitter a,
-.google-plus a {
+.homepage a {
     display: block;
     width: 100%;
     color: rgb(75, 110, 168) !important;
@@ -216,7 +226,7 @@ body {
     color: rgb(79, 213, 248) !important;
 }
 
-.google-plus a {
+.homepage a {
     color: rgb(221, 75, 57) !important;
 }
 
@@ -230,7 +240,7 @@ body {
     background-color: rgb(79, 213, 248) !important;
 }
 
-.google-plus:hover a {
+.homepage:hover a {
     color: rgb(255, 255, 255) !important;
     background-color: rgb(221, 75, 57) !important;
 }
