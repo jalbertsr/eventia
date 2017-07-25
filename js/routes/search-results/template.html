@@ -10,7 +10,7 @@
                     </time>
                     <img ng-src="{{event.imageUrl}}">
                     <div class="info">
-                        <h2 class="title">{{event.name}}</h2>
+                        <a ng-href="#!/event/{{event.id}}"><h2 class="title">{{event.name}}</h2></a>
                         <p class="desc">{{event.city}}</p>
                         <p class="desc">{{event.country}}</p>
                     </div>

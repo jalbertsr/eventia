@@ -19,7 +19,7 @@ header {
     border-radius: 0px;
 }
 
-// HOME STYLES
+/*----------------------------------------- start home styles -----------------------------------------------------*/
 .search {
     height: 120px;
     margin-top: 80px;
@@ -107,6 +107,7 @@ body {
         padding-left: 60px;
     }
 }
+/*----------------------------------------- end event styles -----------------------------------------------------*/
 
 
 
@@ -115,8 +116,7 @@ body {
 
 
 
-
-// SEARCH STYLES
+/*----------------------------------------- serach styles -----------------------------------------------------*/
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 body {
@@ -330,10 +330,19 @@ body {
         width: 40px;
         padding: 10px 0px 9px;
     }
+    
+    div.info{
+        a{
+            color: inherit;
+            text-decoration: inherit;
+        }
+    }
 }
+/*----------------------------------------- end serach styles -----------------------------------------------------*/
 
-// EVENTS STYLES
+/*----------------------------------------- start event styles -----------------------------------------------------*/
 .info{
     margin: 10px 0;
     background-color: white;
  }
+ /*----------------------------------------- end event styles -----------------------------------------------------*/
