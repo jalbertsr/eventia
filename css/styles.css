@@ -9,7 +9,10 @@ header div {
   margin-bottom: 30px; }
 
 .events {
-  background-color: black; }
+  background-color: black;
+  border-radius: 10px;
+  padding-top: 20px;
+  margin-bottom: 50px; }
 
 .footer {
   height: 150px;
@@ -18,3 +21,15 @@ header div {
 
 body {
   background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%); }
+
+.thumbnail {
+  height: 300px;
+  position: relative; }
+
+.caption h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.caption button {
+  position: absolute; }

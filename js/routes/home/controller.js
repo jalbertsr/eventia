@@ -24,17 +24,6 @@ angular.module('tickets-app')
       // }
     })
 
-    .controller('dailyController', function ($scope, $rootScope, dataService) {
-      dataService.getPopular()
-                .then(function (response) {
-                  console.log(response)
-                  var completeEvents = response.data._embedded.events
-                  console.log(completeEvents)
-                  $scope.events = completeEvents.slice(0, 4)
-                })
-      // }
-    })
-
     // .controller('relevantController', function ($scope, $rootScope, dataService) {
     //  // $scope.getRelevant = function () {
     //   var keyword = $scope.event
