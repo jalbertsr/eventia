@@ -16,13 +16,13 @@ angular.module('tickets-app')
         return $http.get(url)
       }
 
-      function getRelevant () {
-        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=' + +'&apikey=' + apiKey
+      function getEvent (idEvent) {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events/' + idEvent + '.json?apikey=' + apiKey
         return $http.get(url)
       }
 
-       function getEvent (idEvent) {
-        var url = 'https://app.ticketmaster.com/discovery/v2/events/' + idEvent + '.json?apikey=' + apiKey
+      function getLocalEvents () {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=ES&apikey=' + apiKey
         return $http.get(url)
       }
 
@@ -30,7 +30,7 @@ angular.module('tickets-app')
         getKeywordSearch: getKeywordSearch,
         getDaily: getDaily,
         getPopular: getPopular,
-        getRelevant: getRelevant,
+        getLocalEvents: getLocalEvents,
         getEvent: getEvent
       }
     })
