@@ -1,7 +1,7 @@
 <!-- <p>{{4+6}}</p> -->
 <div class="container">
-	<!-- Start of imgImportantInfo -->
-    <div class="info container">
+    <!-- Start of imgImportantInfo -->
+    <div class="eventCardInfo container">
         <div class="row">
             <div class="container col-xs-12 col-sm-6">
                 <div>
@@ -10,50 +10,46 @@
             </div>
             <div class="container col-xs-12 col-sm-6">
                 <div class="row">
-					<div class="col-xs-12">
-						<h3>{{event.name}}</h3>
-					</div>
-					<div class="col-xs-6 miniInfo">
-						<p>Date:</p>
-						<p>{{eventInformation[0].localDate}}</p>
-					</div>
-					<div class="col-xs-6 miniInfo">
-						<p>Time:</p>
-						<p>{{eventInformation[0].localTime}}</p>
-					</div>
-					<div class="col-xs-6 miniInfo">
-						<p>Sales:</p>
-						<p>{{eventInformation[0].salesStart}}</p>
-						<p>{{eventInformation[0].salesEnd}}</p>
-					</div>
-					<div class="col-xs-6 miniInfo">
-						<p></p>
-					</div>
-					<div class="col-xs-6 miniInfo">
-						<p>Ticket Status:</p>
-						<p>{{event.dates.status.code}}</p>
-					</div>
-					<div class="col-xs-6 miniInfo">
-						<p>Prize Range:</p>
-						<p>{{event.priceRanges["0"].min}}$ - {{event.priceRanges["0"].max}}$</p>
-					</div>
+                    <div class="col-xs-12">
+                        <h3>{{event.name}}</h3>
+                    </div>
+                    <div class="col-xs-6 miniInfo">
+                        <p>Date:</p>
+                        <p>{{eventInformation[0].localDate}}</p>
+                    </div>
+                    <div class="col-xs-6 miniInfo">
+                        <p>Time:</p>
+                        <p>{{eventInformation[0].localTime}}</p>
+                    </div>
+                    <div class="col-xs-6 miniInfo">
+                        <p>Sales:</p>
+                        <p>{{eventInformation[0].salesStart}}</p>
+                        <p>{{eventInformation[0].salesEnd}}</p>
+                    </div>
+                    <div class="col-xs-6 miniInfo">
+                        <p></p>
+                    </div>
+                    <div class="col-xs-6 miniInfo">
+                        <p>Ticket Status:</p>
+                        <p>{{event.dates.status.code}}</p>
+                    </div>
+                    <div class="col-xs-6 miniInfo">
+                        <p>Prize Range:</p>
+                        <p>{{event.priceRanges["0"].min}}$ - {{event.priceRanges["0"].max}}$</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End of imgImportantInfo -->
     <!-- Start of infoMap -->
-    <div class="info container">
+    <div class="eventCardInfo container">
         <div class="row">
-            <div class="container">
-                <div class="container col-xs-12 col-sm-3">
-                	<p>{{event.info}}</p>
-                </div>
+            <div class="container col-xs-12 col-sm-6">
+                <p>{{event.info}}</p>
             </div>
-            <div class="container container col-xs-12 col-sm-5">
-                <div>
-                	<ng-map center="[{{latitude}}, {{longitude}}]"></ng-map>
-                </div>
+            <div class="container container col-xs-12 col-sm-6">
+                <ng-map center="[{{latitude}}, {{longitude}}]"></ng-map>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pageContent">
     <div class="row">
         <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]" ng-repeat="event in events">
             <ul class="event-list">
@@ -8,7 +8,7 @@
                         <span class="day">{{event.day}}</span>
                         <span class="month">{{event.month}}</span>
                     </time>
-                    <img ng-src="{{event.imageUrl}}">
+                    <img ng-style="{'background-image':'url({{event.imageUrl}})'}">
                     <div class="info">
                         <a ng-href="#!/event/{{event.id}}"><h2 class="title">{{event.name}}</h2></a>
                         <p class="desc">{{event.city}}</p>

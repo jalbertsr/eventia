@@ -20,6 +20,10 @@ header {
     border-radius: 0px;
 }
 
+.pageContent {
+    min-height: 270px;
+}
+
 /*----------------------------------------- start home styles -----------------------------------------------------*/
 .search {
     height: 120px;
@@ -129,8 +133,8 @@ body {
 
 .event-list {
     list-style: none;
-    font-family: 'Lato', sans-serif;
-    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
     padding: 0px;
 }
 
@@ -271,7 +275,14 @@ body {
     color: rgb(255, 255, 255) !important;
     background-color: rgb(221, 75, 57) !important;
 }
-
+@media (max-width: 768px) {
+    .event-list>li>img {
+        visibility: hidden;
+    }
+    .event-list>li>time {
+        border-right: 3px solid white;
+    }
+}
 @media (min-width: 768px) {
     .event-list>li {
         position: relative;
@@ -342,12 +353,22 @@ body {
         }
     }
 }
+
+.event-list {
+    img {
+        height: 40px;
+        background-size: cover;
+        background-position: center center;
+    }
+}
 /*----------------------------------------- end serach styles -----------------------------------------------------*/
 
 /*----------------------------------------- start event styles -----------------------------------------------------*/
-.info{
-    margin: 10px 0;
-    background-color: white;
+.eventCardInfo{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding-top: 10px;
+    margin-bottom: 50px;;
  }
 
 .miniInfo{
