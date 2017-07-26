@@ -347,24 +347,35 @@ div.info a {
 
 /*----------------------------------------- end serach styles -----------------------------------------------------*/
 /*----------------------------------------- start event styles -----------------------------------------------------*/
-.info {
-  margin: 30px 0;
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding-top: 10px; }
-
 .eventCardInfo {
+  font-family: 'Roboto', sans-serif;
+  color: white;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   padding-top: 10px;
   margin-bottom: 50px; }
 
+.name {
+  padding-left: 5px; }
+
+.miniInfo {
+  box-sizing: border-box;
+  padding-left: 30px; }
+
 .imgEvent img {
-  height: 200px;
+  height: 350px;
+  width: 100%;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  margin-bottom: 10px; }
 
 .map {
   margin-bottom: 10px; }
+
+.eventCardInfo p {
+  margin-left: 10px; }
+
+.miniInfo span {
+  font-weight: bold; }
 
 /*----------------------------------------- end event styles -----------------------------------------------------*/
