@@ -1,6 +1,7 @@
  angular.module('tickets-app')
-     .controller('SearchController', function($scope, $routeParams, dataService) {
+     .controller('SearchController', function($scope, $routeParams, $rootScope, dataService) {
        var keyword = $routeParams.keyword
+       var countryCode = ''
        console.log(keyword)
 
        var months = {
@@ -61,14 +62,17 @@
                  console.log($scope.events)
              })
 
-        dataService.getLocalEvents()
-            .then(function (response) {
+        dataService.getGeolocation()
+            .then(function (response){
                 console.log(response)
-            }) 
-
-
-
-
-
+                countryCode = response.data.country_code
+                $rootScope.$broadcast('countryCodeReady', { countryCode: countryCode })
+            })
+        $scope.$on('countryCodeReady', function(e, data) {
+            dataService.getLocalEvents(data.countryCode)
+                .then(function (response) {
+                    console.log(response)
+                }) 
+            })
 
      })

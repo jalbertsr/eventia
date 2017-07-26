@@ -23,6 +23,6 @@ angular.module('tickets-app')
                 .then(function (response) {
                   console.log(response)
                   var completeEvents = response.data._embedded.events
-                  $scope.events = completeEvents.slice(15, 19)
+                  $scope.events = completeEvents.slice(12, 16)
                 })
     })
