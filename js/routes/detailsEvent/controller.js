@@ -12,13 +12,13 @@ angular.module('tickets-app')
           var time = localTime[0] + ':' + localTime[1]
           var startDateSales1 = response.data.sales.public.startDateTime.split('-')
           var startDateSales2 = startDateSales1[2].split('T', 1)
-          var startDateSalesFinal = 'Opens: ' + startDateSales2 + '/' + startDateSales1[1] + '/' + startDateSales1[0] + ' at '
+          var startDateSalesFinal = startDateSales2 + '/' + startDateSales1[1] + '/' + startDateSales1[0] + ' at '
           var startHourSales1 = response.data.sales.public.startDateTime.split(':')
           var startHourSales2 = startHourSales1[0].split('T')
           var startHourSalesFinale = startHourSales2[1] + ':' + startHourSales1[1]
           var endDateSales1 = response.data.sales.public.endDateTime.split('-')
           var endDateSales2 = endDateSales1[2].split('T', 1)
-          var endDateSalesFinal = 'Closes: ' + endDateSales2 + '/' + endDateSales1[1] + '/' + endDateSales1[0] + ' at '
+          var endDateSalesFinal = endDateSales2 + '/' + endDateSales1[1] + '/' + endDateSales1[0] + ' at '
           var endHourSales1 = response.data.sales.public.endDateTime.split(':')
           var endHourSales2 = endHourSales1[0].split('T')
           var endHourSalesFinale = endHourSales2[1] + ':' + endHourSales1[1]
