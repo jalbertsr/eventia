@@ -36,15 +36,15 @@
                          if (digitOne == 0) var day = digitTwo
                          else var day = parseday
 
-                         // if (obj._embedded.attractions && obj._embedded.attractions[0].externalLinks) {
-                         //     var facebookUrl = obj._embedded.attractions[0].externalLinks.facebook[0].url
-                         //     var twitterUrl = obj._embedded.attractions[0].externalLinks.twitter[0].url
-                         //     var artistUrl = obj._embedded.attractions[0].externalLinks.homepage[0].url
-                         // } else {
-                         //     var facebookUrl = '#'
-                         //     var twitterUrl = '#'
-                         //     var artistUrl = '#'
-                         // }
+                         if (obj._embedded.attractions && obj._embedded.attractions[0].externalLinks && obj._embedded.attractions[0].externalLinks.facebook ) {
+                             var facebookUrl = obj._embedded.attractions[0].externalLinks.facebook[0].url
+                             var twitterUrl = obj._embedded.attractions[0].externalLinks.twitter[0].url
+                             var artistUrl = obj._embedded.attractions[0].externalLinks.homepage[0].url
+                         } else {
+                             var facebookUrl = ''
+                             var twitterUrl = ''
+                             var artistUrl = ''
+                         }
 
                          $scope.events.push({
                              month: month,
@@ -54,9 +54,9 @@
                              city: obj._embedded.venues[0].city.name,
                              imageUrl: obj.images[0].url,
                              id: obj.id,
-                             //facbookUrl: facebookUrl,
-                             //twitterUrl: twitterUrl,
-                             //artistUrl: artistUrl
+                             facebookUrl: facebookUrl,
+                             twitterUrl: twitterUrl,
+                             artistUrl: artistUrl
                          })
                      })
                  }
@@ -76,7 +76,6 @@
                  .then(function(response) {
                      console.log(response)
                      $scope.asides = response.data._embedded.events
-                     //localEvents.splice(0, lengthEvents)
                  })
          })
 
