@@ -1,41 +1,51 @@
 <!-- <p>{{4+6}}</p> -->
 <div class="container">
     <!-- Start of imgImportantInfo -->
+
+    <!-- <div class="info container"> -->
+
     <div class="eventCardInfo container">
+
         <div class="row">
-            <div class="container col-xs-12 col-sm-6">
-                <div>
-                    <img class="img-responsive" src="{{event.images[9].url}}" alt="">
-                </div>
+            <div class="imgEvent container col-xs-12 col-sm-6">
+                <img ng-style="{'background-image':'url({{event.images[9].url}})'}" style="width: 100%" alt="">
             </div>
             <div class="container col-xs-12 col-sm-6">
                 <div class="row">
                     <div class="col-xs-12">
                         <h3>{{event.name}}</h3>
                     </div>
-                    <div class="col-xs-6 miniInfo">
-                        <p>Date:</p>
-                        <p>{{eventInformation[0].localDate}}</p>
+<!-- <<<<<<< HEAD -->
+                    <div class="row">
+                        <div class="col-xs-6 miniInfo">
+                            <h4>Date:</h4>
+                            <p>{{eventInformation[0].localDate}}</p>
+                        </div>
+                        <div class="col-xs-6 miniInfo">
+                            <h4>Time:</h4>
+                            <p>{{eventInformation[0].localTime}}</p>
+                        </div>
                     </div>
-                    <div class="col-xs-6 miniInfo">
-                        <p>Time:</p>
-                        <p>{{eventInformation[0].localTime}}</p>
+                    <div class="row">
+                        <div class="col-xs-6 miniInfo">
+                            <h4>Sales:</h4>
+                            <p>{{eventInformation[0].salesStart}}</p>
+                            <p>{{eventInformation[0].salesEnd}}</p>
+                        </div>
+                        <div class="col-xs-6 miniInfo">
+                            <h4>Adrees:</h4>
+                            <p>{{eventInformation[0].adrees}}</p>
+                        </div>
                     </div>
-                    <div class="col-xs-6 miniInfo">
-                        <p>Sales:</p>
-                        <p>{{eventInformation[0].salesStart}}</p>
-                        <p>{{eventInformation[0].salesEnd}}</p>
-                    </div>
-                    <div class="col-xs-6 miniInfo">
-                        <p></p>
-                    </div>
-                    <div class="col-xs-6 miniInfo">
-                        <p>Ticket Status:</p>
-                        <p>{{event.dates.status.code}}</p>
-                    </div>
-                    <div class="col-xs-6 miniInfo">
-                        <p>Prize Range:</p>
-                        <p>{{event.priceRanges["0"].min}}$ - {{event.priceRanges["0"].max}}$</p>
+                    <div class="row">
+                        <div class="col-xs-6 miniInfo">
+                            <h4>Ticket Status:</h4>
+                            <p>{{event.dates.status.code}}</p>
+                        </div>
+                        <div class="col-xs-6 miniInfo">
+                            <h4>Prize Range:</h4>
+                            <p>{{event.priceRanges["0"].min}}$ - {{event.priceRanges["0"].max}}$</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,10 +56,19 @@
     <div class="eventCardInfo container">
         <div class="row">
             <div class="container col-xs-12 col-sm-6">
+            	<h2>General Info:</h2>
                 <p>{{event.info}}</p>
+                <h4 ng-if='event.accessibility.info'>Accessibility:</h4>
+                <p>{{event.accessibility.info}}</p>
+                <h4 ng-if='event._embedded.venues[0].boxOfficeInfo.openHoursDetail'>Box Office Info:</h4>
+                <p>{{event._embedded.venues[0].boxOfficeInfo.openHoursDetail}}</p>
+                <h4 ng-if='event.promoter.description'>Promoter:</h4>
+                <p>{{event.promoter.description}}</p>
             </div>
             <div class="container container col-xs-12 col-sm-6">
-                <ng-map center="[{{latitude}}, {{longitude}}]"></ng-map>
+                <ng-map center="[{{latitude}}, {{longitude}}]">
+                     <marker position= "{{latitude}}, {{longitude}}"></marker>
+                </ng-map>
             </div>
         </div>
     </div>
