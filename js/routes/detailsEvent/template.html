@@ -65,8 +65,10 @@
                 <h4 ng-if='event.promoter.description'>Promoter:</h4>
                 <p>{{event.promoter.description}}</p>
             </div>
-            <div class="map container col-xs-12 col-sm-6">
-                <ng-map center="[{{latitude}}, {{longitude}}]"></ng-map>
+            <div class="container container col-xs-12 col-sm-6">
+                <ng-map center="[{{latitude}}, {{longitude}}]">
+                     <marker position= "{{latitude}}, {{longitude}}"></marker>
+                </ng-map>
             </div>
         </div>
     </div>
