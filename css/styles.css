@@ -17,6 +17,9 @@ header {
   justify-content: center;
   border-radius: 0px; }
 
+.pageContent {
+  min-height: 270px; }
+
 /*----------------------------------------- start home styles -----------------------------------------------------*/
 .search {
   height: 120px;
@@ -68,10 +71,19 @@ body {
   background-size: cover;
   background-position: center center; }
 
-.caption h3 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden; }
+.caption {
+  margin-top: -30px; }
+  .caption h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  .caption a {
+    text-decoration: none;
+    color: inherit; }
+  .caption a:hover {
+    color: #999; }
+  .caption p {
+    line-height: 12px; }
 
 .imageContainer {
   width: 100%;
@@ -91,9 +103,24 @@ body {
 
 .event-list {
   list-style: none;
-  font-family: 'Lato', sans-serif;
-  margin: 0px;
-  padding: 0px; }
+  font-family: 'Roboto', sans-serif;
+  margin: 10px;
+  margin-left: 0;
+  padding: 0; }
+  .event-list .info h2 {
+    font-size: 24px;
+    font-weight: bold; }
+
+.eventsAside {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 50px; }
+  .eventsAside .thumbnail {
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    border-style: none; }
 
 .event-list > li {
   background-color: white;
@@ -119,8 +146,10 @@ body {
   display: none; }
 
 .event-list > li > time > .day {
+  padding-top: 5px;
+  padding-bottom: 5px;
   display: block;
-  font-size: 56pt;
+  font-size: 50pt;
   font-weight: 100;
   line-height: 1; }
 
@@ -170,9 +199,11 @@ body {
 
 .event-list > li > .info > ul > li > a {
   display: block;
-  width: 100%;
-  color: #1e1e1e;
-  text-decoration: none; }
+  width: 100%; }
+
+div.info a {
+  color: inherit;
+  text-decoration: inherit; }
 
 .event-list > li > .social > ul > li {
   padding: 0px; }
@@ -190,26 +221,36 @@ body {
 .homepage a {
   display: block;
   width: 100%;
-  color: #4b6ea8 !important; }
+  color: #CCC !important; }
 
 .twitter a {
-  color: #4fd5f8 !important; }
+  color: #CCC !important; }
 
 .homepage a {
-  color: #dd4b39 !important; }
+  color: #CCC !important; }
 
 .facebook:hover a {
-  color: white !important;
-  background-color: #4b6ea8 !important; }
+  color: #999 !important;
+  background-color: #CCC !important; }
 
 .twitter:hover a {
-  color: white !important;
-  background-color: #4fd5f8 !important; }
+  color: #999 !important;
+  background-color: #CCC !important; }
 
 .homepage:hover a {
-  color: white !important;
-  background-color: #dd4b39 !important; }
+  color: #999 !important;
+  background-color: #CCC !important; }
 
+@media (max-width: 768px) {
+  .event-list > li > img {
+    display: block;
+    height: 200px;
+    background-size: cover;
+    background-position: center center; }
+
+  .event-list > li > time {
+    border-right: none;
+    border-bottom: 3px solid white; } }
 @media (min-width: 768px) {
   .event-list > li {
     position: relative;
@@ -272,9 +313,17 @@ body {
     width: 40px;
     padding: 10px 0px 9px; }
 
+  div.info h2 {
+    margin-top: 5px;
+    margin-left: 10px; }
   div.info a {
     color: inherit;
     text-decoration: inherit; } }
+.event-list img {
+  height: 40px;
+  background-size: cover;
+  background-position: center center; }
+
 /*----------------------------------------- end serach styles -----------------------------------------------------*/
 /*----------------------------------------- start event styles -----------------------------------------------------*/
 .info {
@@ -282,6 +331,12 @@ body {
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.3);
   padding-top: 10px; }
+
+.eventCardInfo {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding-top: 10px;
+  margin-bottom: 50px; }
 
 .imgEvent img {
   height: 200px;

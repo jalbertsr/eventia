@@ -1,7 +1,11 @@
 <!-- <p>{{4+6}}</p> -->
 <div class="container">
     <!-- Start of imgImportantInfo -->
-    <div class="info container">
+
+    <!-- <div class="info container"> -->
+
+    <div class="eventCardInfo container">
+
         <div class="row">
             <div class="imgEvent container col-xs-12 col-sm-6">
                 <img ng-style="{'background-image':'url({{event.images[9].url}})'}" style="width: 100%" alt="">
@@ -11,6 +15,7 @@
                     <div class="col-xs-12">
                         <h3>{{event.name}}</h3>
                     </div>
+<!-- <<<<<<< HEAD -->
                     <div class="row">
                         <div class="col-xs-6 miniInfo">
                             <h4>Date:</h4>
@@ -48,7 +53,7 @@
     </div>
     <!-- End of imgImportantInfo -->
     <!-- Start of infoMap -->
-    <div class="info container">
+    <div class="eventCardInfo container">
         <div class="row">
             <div class="container col-xs-12 col-sm-6">
             	<h2>General Info:</h2>
@@ -59,8 +64,6 @@
                 <p>{{event._embedded.venues[0].boxOfficeInfo.openHoursDetail}}</p>
                 <h4 ng-if='event.promoter.description'>Promoter:</h4>
                 <p>{{event.promoter.description}}</p>
-
-
             </div>
             <div class="map container col-xs-12 col-sm-6">
                 <ng-map center="[{{latitude}}, {{longitude}}]"></ng-map>

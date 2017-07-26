@@ -16,13 +16,19 @@ angular.module('tickets-app')
         return $http.get(url)
       }
 
-      function getRelevant () {
-        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=' + +'&apikey=' + apiKey
+      function getEvent (idEvent) {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events/' + idEvent + '.json?apikey=' + apiKey
         return $http.get(url)
       }
 
-       function getEvent (idEvent) {
-        var url = 'https://app.ticketmaster.com/discovery/v2/events/' + idEvent + '.json?apikey=' + apiKey
+      function getGeolocation () {
+        var url = 'https://freegeoip.net/json/' //http://ip-api.com/json
+        return $http.get(url)
+      }
+
+      function getLocalEvents (countryCode) {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=' + countryCode + '&apikey=' + apiKey
+        console.log(countryCode)
         return $http.get(url)
       }
 
@@ -30,7 +36,8 @@ angular.module('tickets-app')
         getKeywordSearch: getKeywordSearch,
         getDaily: getDaily,
         getPopular: getPopular,
-        getRelevant: getRelevant,
+        getGeolocation: getGeolocation,
+        getLocalEvents: getLocalEvents,
         getEvent: getEvent
       }
     })
