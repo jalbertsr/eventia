@@ -120,6 +120,28 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 3px;
     border-style: none; }
+    .eventsAside .thumbnail .caption h3 {
+      padding-top: 14px;
+      font-size: 17px;
+      color: white;
+      font-weight: bold; }
+    .eventsAside .thumbnail .caption p {
+      font-size: 12px;
+      color: white;
+      line-height: 8px; }
+    .eventsAside .thumbnail .caption p:nth-child(2) {
+      font-weight: bold; }
+
+.titleLocalEvents {
+  margin-top: 30px;
+  padding-bottom: 10px;
+  background-color: #000000;
+  border-radius: 3px; }
+  .titleLocalEvents h3 {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white; }
 
 .event-list > li {
   background-color: white;
