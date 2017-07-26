@@ -22,7 +22,7 @@ angular.module('tickets-app')
       }
 
       function getGeolocation () {
-        var url = 'https://freegeoip.net/json/' // http://ip-api.com/json
+        var url = 'https://freegeoip.net/json/' // http://ip-api.com/json --> option2
         return $http.get(url)
       }
 
@@ -31,6 +31,21 @@ angular.module('tickets-app')
         console.log(countryCode)
         return $http.get(url)
       }
+
+      // function getMusicEvents () {
+      //   var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=music&apikey=' + apiKey
+      //   return $http.get(url)
+      // }
+
+      // function getSportsEvents () {
+      //   var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=sports&apikey=' + apiKey
+      //   return $http.get(url)
+      // }
+
+      // function getArtEvents () {
+      //   var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=art&apikey=' + apiKey
+      //   return $http.get(url)
+      // }
 
       return {
         getKeywordSearch: getKeywordSearch,

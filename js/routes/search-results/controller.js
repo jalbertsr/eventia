@@ -2,6 +2,7 @@
      .controller('SearchController', function ($scope, $routeParams, $rootScope, dataService) {
        var keyword = $routeParams.keyword
        var countryCode = ''
+       $scope.show = false
          // var lengthEvents
        console.log(keyword)
 
@@ -24,7 +25,10 @@
              .then(function (response) {
                console.log(response)
                $scope.events = []
-               if (!response.data._embedded) { console.log('event not available') } else {
+               if (!response.data._embedded) {
+                 console.log('event not available')
+                 $scope.show = true
+               } else {
                  var eventsResponse = response.data._embedded.events
                  eventsResponse.forEach(function (obj) {
                    var localDate = obj.dates.start.localDate
