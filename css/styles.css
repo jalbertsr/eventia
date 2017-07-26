@@ -3,6 +3,9 @@ header {
   background-color: black;
   color: white;
   margin: 0; }
+  header div a, header div a:active, header div a:visited, header div a:hover, header div a:focus {
+    text-decoration: none;
+    color: white; }
   header div h1 {
     margin-top: 0;
     padding-top: 40px;
