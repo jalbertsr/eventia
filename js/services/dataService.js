@@ -21,8 +21,14 @@ angular.module('tickets-app')
         return $http.get(url)
       }
 
-      function getLocalEvents () {
-        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=ES&apikey=' + apiKey
+      function getGeolocation () {
+        var url = 'https://freegeoip.net/json/' //http://ip-api.com/json
+        return $http.get(url)
+      }
+
+      function getLocalEvents (countryCode) {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=' + countryCode + '&apikey=' + apiKey
+        console.log(countryCode)
         return $http.get(url)
       }
 
@@ -30,6 +36,7 @@ angular.module('tickets-app')
         getKeywordSearch: getKeywordSearch,
         getDaily: getDaily,
         getPopular: getPopular,
+        getGeolocation: getGeolocation,
         getLocalEvents: getLocalEvents,
         getEvent: getEvent
       }
