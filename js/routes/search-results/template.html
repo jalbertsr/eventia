@@ -1,28 +1,39 @@
 <div class="container pageContent">
-    <div class="row">
-        <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]" ng-repeat="event in events">
-            <ul class="event-list">
-                <li>
-                    <time>
-
-                        <span class="day">{{event.day}}</span>
-                        <span class="month">{{event.month}}</span>
-                    </time>
-                    <img ng-style="{'background-image':'url({{event.imageUrl}})'}">
-                    <div class="info">
-                        <a ng-href="#!/event/{{event.id}}"><h2 class="title">{{event.name}}</h2></a>
-                        <p class="desc">{{event.city}}</p>
-                        <p class="desc">{{event.country}}</p>
-                    </div>
-                    <div class="social">
-                        <ul>
-                            <li class="facebook" style="width:33%;"><a ng-href="{{event.facebookUrl}}"><span class="fa fa-facebook"></span></a></li>
-                            <li class="twitter" style="width:34%;"><a ng-href="{{event.twitterUrl}}"><span class="fa fa-twitter"></span></a></li>
-                            <li class="homepage" style="width:33%;"><a ng-href="{{event.artistUrl}}"><span class="fa fa-globe"></span></a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+    <div class="eventCont row">
+        <div class="eventCont col-xs-12 col-sm-9">
+            <div ng-repeat="event in events">
+                <ul class="event-list">
+                    <li>
+                        <time>
+                            <span class="day">{{event.day}}</span>
+                            <span class="month">{{event.month}}</span>
+                        </time>
+                        <img ng-style="{'background-image':'url({{event.imageUrl}})'}">
+                        <div class="info">
+                            <a ng-href="#!/event/{{event.id}}"><h2 class="title">{{event.name}}</h2></a>
+                            <p class="desc">{{event.city}}</p>
+                            <p class="desc">{{event.country}}</p>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li class="facebook" style="width:33%;"><a ng-href="{{event.facebookUrl}}"><span class="fa fa-facebook"></span></a></li>
+                                <li class="twitter" style="width:34%;"><a ng-href="{{event.twitterUrl}}"><span class="fa fa-twitter"></span></a></li>
+                                <li class="homepage" style="width:33%;"><a ng-href="{{event.artistUrl}}"><span class="fa fa-globe"></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 eventsAside">
+            <div class="thumbnail">
+                <!-- <img src="..." alt="..."> -->
+                <div class="caption">
+                    <h3>{{event.name}}</h3>
+                    <p class="desc">{{event._embedded.venues["0"].city.name}}</p>
+                    <p class="desc">{{event._embedded.venues["0"].country.name}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
