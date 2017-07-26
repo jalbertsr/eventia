@@ -32,20 +32,20 @@ angular.module('tickets-app')
         return $http.get(url)
       }
 
-      // function getMusicEvents () {
-      //   var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=music&apikey=' + apiKey
-      //   return $http.get(url)
-      // }
+      function getMusicEvents () {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&apikey=' + apiKey
+        return $http.get(url)
+      }
 
-      // function getSportsEvents () {
-      //   var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=sports&apikey=' + apiKey
-      //   return $http.get(url)
-      // }
+      function getSportsEvents () {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=sports&apikey=' + apiKey
+        return $http.get(url)
+      }
 
-      // function getArtEvents () {
-      //   var url = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=art&apikey=' + apiKey
-      //   return $http.get(url)
-      // }
+      function getArtEvents () {
+        var url = 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=theatre&&apikey=' + apiKey
+        return $http.get(url)
+      }
 
       return {
         getKeywordSearch: getKeywordSearch,
@@ -53,6 +53,9 @@ angular.module('tickets-app')
         getPopular: getPopular,
         getGeolocation: getGeolocation,
         getLocalEvents: getLocalEvents,
-        getEvent: getEvent
+        getEvent: getEvent,
+        getArtEvents: getArtEvents,
+        getMusicEvents: getMusicEvents,
+        getSportsEvents: getSportsEvents
       }
     })

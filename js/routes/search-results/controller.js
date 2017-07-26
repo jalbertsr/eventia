@@ -40,7 +40,9 @@
                    if (digitOne == 0) var day = digitTwo
                    else var day = parseday
 
-                   if (obj._embedded.attractions && obj._embedded.attractions[0].externalLinks && obj._embedded.attractions[0].externalLinks.facebook) {
+                   if (obj._embedded.attractions && obj._embedded.attractions[0].externalLinks &&
+                       obj._embedded.attractions[0].externalLinks.facebook && obj._embedded.attractions[0].externalLinks.twitter &&
+                       obj._embedded.attractions[0].externalLinks.homepage) {
                      var facebookUrl = obj._embedded.attractions[0].externalLinks.facebook[0].url
                      var twitterUrl = obj._embedded.attractions[0].externalLinks.twitter[0].url
                      var artistUrl = obj._embedded.attractions[0].externalLinks.homepage[0].url
@@ -64,7 +66,6 @@
                    })
                  })
                }
-               console.log($scope.events)
                var lengthEvents = $scope.events.length
                console.log(lengthEvents + ' event found')
              })
