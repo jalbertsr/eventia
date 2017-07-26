@@ -54,6 +54,7 @@ footer {
         padding-top: 30px;
         list-style: none;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         li {
             display: inline;
@@ -136,8 +137,6 @@ body {
 
 
 /*----------------------------------------- serach styles -----------------------------------------------------*/
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 body {
     background-color: rgb(220, 220, 220);
 }
