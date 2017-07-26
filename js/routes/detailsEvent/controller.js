@@ -16,14 +16,15 @@ angular.module('tickets-app')
           var startHourSales1 = response.data.sales.public.startDateTime.split(':')
           var startHourSales2 = startHourSales1[0].split('T')
           var startHourSalesFinale = startHourSales2[1] + ':' + startHourSales1[1]
-
           var endDateSales1 = response.data.sales.public.endDateTime.split('-')
           var endDateSales2 = endDateSales1[2].split('T', 1)
           var endDateSalesFinal = 'Closes: ' + endDateSales2 + '/' + endDateSales1[1] + '/' + endDateSales1[0] + ' at '
           var endHourSales1 = response.data.sales.public.endDateTime.split(':')
           var endHourSales2 = endHourSales1[0].split('T')
           var endHourSalesFinale = endHourSales2[1] + ':' + endHourSales1[1]
-          console.log(endHourSalesFinale)
+          var adrees = response.data._embedded.venues['0'].address.line1 + ', ' + response.data._embedded.venues['0'].postalCode + ', ' + response.data._embedded.venues['0'].city.name + ', ' + response.data._embedded.venues['0'].country.name
+          // var info
+          console.log(adrees)
 
           $scope.latitude = response.data._embedded.venues['0'].location.latitude
           $scope.longitude = response.data._embedded.venues['0'].location.longitude
@@ -34,7 +35,8 @@ angular.module('tickets-app')
             localDate: date,
             localTime: time,
             salesStart: startDateSalesFinal + startHourSalesFinale,
-            salesEnd: endDateSalesFinal + endHourSalesFinale
+            salesEnd: endDateSalesFinal + endHourSalesFinale,
+            adrees: adrees
           })
         })
   })
