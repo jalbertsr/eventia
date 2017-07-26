@@ -279,6 +279,13 @@ body {
 /*----------------------------------------- start event styles -----------------------------------------------------*/
 .info {
   margin: 10px 0;
-  background-color: white; }
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 10px; }
+
+.info div .imgEvent img {
+  height: 200px;
+  background-size: cover;
+  background-position: center center; }
 
 /*----------------------------------------- end event styles -----------------------------------------------------*/

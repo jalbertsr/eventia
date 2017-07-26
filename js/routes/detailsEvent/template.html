@@ -3,10 +3,9 @@
 	<!-- Start of imgImportantInfo -->
     <div class="info container">
         <div class="row">
-            <div class="container col-xs-12 col-sm-6">
-                <div>
-                    <img class="img-responsive" src="{{event.images[9].url}}" alt="">
-                </div>
+            <div class="imgEvent container col-xs-12 col-sm-6">
+            		<p>{{event.images[9].url}}</p>
+                    <img ng-style="{'background-image':'url({{event.images[9].url}})'}" style="width: 100%" alt="">
             </div>
             <div class="container col-xs-12 col-sm-6">
                 <div class="row">
@@ -45,15 +44,11 @@
     <!-- Start of infoMap -->
     <div class="info container">
         <div class="row">
-            <div class="container">
-                <div class="container col-xs-12 col-sm-3">
-                	<p>{{event.info}}</p>
-                </div>
+            <div class="container col-xs-12 col-sm-6">
+                	<p>{{event.info}}</p> 
             </div>
-            <div class="container container col-xs-12 col-sm-5">
-                <div>
+            <div class="container col-xs-12 col-sm-6">
                 	<ng-map center="[{{latitude}}, {{longitude}}]"></ng-map>
-                </div>
             </div>
         </div>
     </div>
