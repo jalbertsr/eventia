@@ -1,10 +1,11 @@
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 header {
   height: 120px;
   background-color: black;
   color: white;
   margin: 0; }
+  header div a, header div a:active, header div a:visited, header div a:hover, header div a:focus {
+    text-decoration: none;
+    color: white; }
   header div h1 {
     margin-top: 0;
     padding-top: 40px;
@@ -46,6 +47,7 @@ footer {
     padding-top: 30px;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center; }
     footer ul li {
       display: inline;
@@ -121,6 +123,28 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 3px;
     border-style: none; }
+    .eventsAside .thumbnail .caption h3 {
+      padding-top: 14px;
+      font-size: 17px;
+      color: white;
+      font-weight: bold; }
+    .eventsAside .thumbnail .caption p {
+      font-size: 12px;
+      color: white;
+      line-height: 8px; }
+    .eventsAside .thumbnail .caption p:nth-child(2) {
+      font-weight: bold; }
+
+.titleLocalEvents {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  background-color: #000000;
+  border-radius: 3px; }
+  .titleLocalEvents h3 {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white; }
 
 .event-list > li {
   background-color: white;
@@ -326,24 +350,35 @@ div.info a {
 
 /*----------------------------------------- end serach styles -----------------------------------------------------*/
 /*----------------------------------------- start event styles -----------------------------------------------------*/
-.info {
-  margin: 30px 0;
-  border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding-top: 10px; }
-
 .eventCardInfo {
+  font-family: 'Roboto', sans-serif;
+  color: white;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   padding-top: 10px;
   margin-bottom: 50px; }
 
+.name {
+  padding-left: 5px; }
+
+.miniInfo {
+  box-sizing: border-box;
+  padding-left: 30px; }
+
 .imgEvent img {
-  height: 200px;
+  height: 350px;
+  width: 100%;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  margin-bottom: 10px; }
 
 .map {
   margin-bottom: 10px; }
+
+.eventCardInfo p {
+  margin-left: 10px; }
+
+.miniInfo span {
+  font-weight: bold; }
 
 /*----------------------------------------- end event styles -----------------------------------------------------*/

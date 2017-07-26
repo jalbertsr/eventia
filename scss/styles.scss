@@ -4,6 +4,10 @@ header {
     color: white;
     margin: 0;
     div {
+        a, a:active, a:visited, a:hover, a:focus {
+            text-decoration: none;
+            color: white;
+        }
         h1 {
             margin-top: 0;
             padding-top: 40px;
@@ -24,7 +28,9 @@ header {
     min-height: 270px;
 }
 
+
 /*----------------------------------------- start home styles -----------------------------------------------------*/
+
 .search {
     height: 120px;
     margin-top: 80px;
@@ -35,8 +41,7 @@ header {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     padding-top: 10px;
-    margin-bottom: 50px;
-    // box-shadow: 2px 2px 5px #888888;
+    margin-bottom: 50px; // box-shadow: 2px 2px 5px #888888;
     h1 {
         padding-bottom: 20px;
         padding-left: 20px;
@@ -54,6 +59,7 @@ footer {
         padding-top: 30px;
         list-style: none;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         li {
             display: inline;
@@ -73,8 +79,7 @@ footer {
 }
 
 body {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-    // background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); // background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -86,7 +91,7 @@ body {
     img {
         height: 200px;
         background-size: cover;
-        background-position: center center; 
+        background-position: center center;
     }
 }
 
@@ -131,11 +136,13 @@ body {
         padding-left: 60px;
     }
 }
+
+
 /*----------------------------------------- end event styles -----------------------------------------------------*/
 
 
-
 /*----------------------------------------- serach styles -----------------------------------------------------*/
+
 body {
     background-color: rgb(220, 220, 220);
 }
@@ -164,7 +171,36 @@ body {
         background-color: rgba(0, 0, 0, 0.7);
         border-radius: 3px;
         border-style: none;
+        .caption {
+            h3 {
+                padding-top: 14px;
+                font-size: 17px;
+                color: white;
+                font-weight: bold;
+            }
+            p {
+                font-size: 12px;
+                color: white;
+                line-height: 8px;
+            }
+            p:nth-child(2) {
+                font-weight: bold;
+            }
+        }
+    }
+}
 
+.titleLocalEvents {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background-color: #000000;
+    border-radius: 3px;
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        color: white;
+        // font-weight: bold;
     }
 }
 
@@ -260,12 +296,13 @@ body {
     display: block;
     width: 100%;
 }
-div.info{
-        a{
-            color: inherit;
-            text-decoration: inherit;
-        }
+
+div.info {
+    a {
+        color: inherit;
+        text-decoration: inherit;
     }
+}
 
 .event-list>li>.social>ul>li {
     padding: 0px;
@@ -321,7 +358,7 @@ div.info{
     }
     .event-list>li>time {
         border-right: none;
-        border-bottom: 3px solid white;  
+        border-bottom: 3px solid white;
     }
 }
 
@@ -387,13 +424,13 @@ div.info{
         width: 40px;
         padding: 10px 0px 9px;
     }
-    
-    div.info{
+
+    div.info {
         h2 {
             margin-top: 5px;
             margin-left: 10px;
         }
-        a{
+        a {
             color: inherit;
             text-decoration: inherit;
         }
@@ -407,35 +444,56 @@ div.info{
         background-position: center center;
     }
 }
+
+
 /*----------------------------------------- end serach styles -----------------------------------------------------*/
+
 
 /*----------------------------------------- start event styles -----------------------------------------------------*/
 
-.info{
-    margin: 30px 0;
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding-top: 10px;
-}
-
 .eventCardInfo{
+    font-family: 'Roboto', sans-serif;
+    color: white;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     padding-top: 10px;
     margin-bottom: 50px;
  }
- 
+
+.name{
+    padding-left: 5px;
+ }
+  
+.miniInfo{
+    box-sizing: border-box;
+    padding-left: 30px
+}
+
 .imgEvent{
     img{
-        height: 200px;
+        height: 350px;
+        width: 100%;
         background-size: cover;
         background-position: center center;
+        margin-bottom: 10px;
     }
 }
 
-.map{
+.map {
     margin-bottom: 10px
 }
+.eventCardInfo{
+    p{
+        margin-left: 10px
+    }
+    
+}
 
- /*----------------------------------------- end event styles -----------------------------------------------------*/
+.miniInfo{
+    span{
+        font-weight: bold;
+    }
+}
 
+
+/*----------------------------------------- end event styles -----------------------------------------------------*/

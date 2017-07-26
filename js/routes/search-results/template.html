@@ -25,13 +25,16 @@
                 </ul>
             </div>
         </div>
+        <div class="titleLocalEvents col-xs-12 col-sm-3">
+                <h3>LOCAL EVENTS</h3>
+        </div>
         <div class="col-xs-12 col-sm-3 eventsAside">
-            <div class="thumbnail">
+            <div ng-repeat="aside in asides" class="thumbnail">
                 <!-- <img src="..." alt="..."> -->
                 <div class="caption">
-                    <h3>{{event.name}}</h3>
-                    <p class="desc">{{event._embedded.venues["0"].city.name}}</p>
-                    <p class="desc">{{event._embedded.venues["0"].country.name}}</p>
+                    <h3>{{aside.name}}</h3>
+                    <p class="desc">{{aside._embedded.venues["0"].name}}</p>
+                    <p class="desc">{{aside._embedded.venues["0"].city.name}}</p>
                 </div>
             </div>
         </div>
