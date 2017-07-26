@@ -92,10 +92,21 @@ body {
 
 
 .caption {
+    margin-top: -30px;
     h3 {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    a:hover {
+        color: #999;
+    }
+    p {
+        line-height: 12px;
     }
 }
 
@@ -135,7 +146,28 @@ body {
     list-style: none;
     font-family: 'Roboto', sans-serif;
     margin: 10px;
-    padding: 0px;
+    margin-left: 0;
+    padding: 0;
+    .info {
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+}
+
+.eventsAside {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    .thumbnail {
+        margin-top: 15px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 3px;
+        border-style: none;
+
+    }
 }
 
 .event-list>li {
@@ -166,8 +198,10 @@ body {
 }
 
 .event-list>li>time>.day {
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: block;
-    font-size: 56pt;
+    font-size: 50pt;
     font-weight: 100;
     line-height: 1;
 }
@@ -227,9 +261,13 @@ body {
 .event-list>li>.info>ul>li>a {
     display: block;
     width: 100%;
-    color: rgb(30, 30, 30);
-    text-decoration: none;
 }
+div.info{
+        a{
+            color: inherit;
+            text-decoration: inherit;
+        }
+    }
 
 .event-list>li>.social>ul>li {
     padding: 0px;
@@ -250,39 +288,45 @@ body {
 .homepage a {
     display: block;
     width: 100%;
-    color: rgb(75, 110, 168) !important;
+    color: #CCC !important;
 }
 
 .twitter a {
-    color: rgb(79, 213, 248) !important;
+    color: #CCC !important;
 }
 
 .homepage a {
-    color: rgb(221, 75, 57) !important;
+    color: #CCC !important;
 }
 
 .facebook:hover a {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(75, 110, 168) !important;
+    color: #999 !important;
+    background-color: #CCC !important;
 }
 
 .twitter:hover a {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(79, 213, 248) !important;
+    color: #999 !important;
+    background-color: #CCC !important;
 }
 
 .homepage:hover a {
-    color: rgb(255, 255, 255) !important;
-    background-color: rgb(221, 75, 57) !important;
+    color: #999 !important;
+    background-color: #CCC !important;
 }
+
 @media (max-width: 768px) {
     .event-list>li>img {
-        visibility: hidden;
+        display: block;
+        height: 200px;
+        background-size: cover;
+        background-position: center center;
     }
     .event-list>li>time {
-        border-right: 3px solid white;
+        border-right: none;
+        border-bottom: 3px solid white;  
     }
 }
+
 @media (min-width: 768px) {
     .event-list>li {
         position: relative;
@@ -347,6 +391,10 @@ body {
     }
     
     div.info{
+        h2 {
+            margin-top: 5px;
+            margin-left: 10px;
+        }
         a{
             color: inherit;
             text-decoration: inherit;
