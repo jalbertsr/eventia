@@ -22,7 +22,7 @@ angular.module('tickets-app')
       }
 
       function getGeolocation () {
-        var url = 'https://freegeoip.net/json/' //http://ip-api.com/json
+        var url = 'https://freegeoip.net/json/' // http://ip-api.com/json
         return $http.get(url)
       }
 
