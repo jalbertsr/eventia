@@ -2,7 +2,7 @@
     <!-- Start of imgImportantInfo -->
     <div class="eventCardInfo">
         <div class="row">
-            <div class="imgEvent container col-xs-12 col-sm-6" >
+            <div class="imgEvent container col-xs-12 col-sm-6">
                 <img style="background-image:url({{vm.event.images[9].url}})">
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -50,7 +50,7 @@
     <div class="eventCardInfo">
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-            	<h2>General Info:</h2>
+                <h2>General Info:</h2>
                 <p>{{vm.event.info}}</p>
                 <h4 ng-if='vm.event.accessibility.info'>Accessibility:</h4>
                 <p>{{vm.event.accessibility.info}}</p>
@@ -59,12 +59,12 @@
                 <h4 ng-if='vm.event.promoter.description'>Promoter:</h4>
                 <p>{{vm.event.promoter.description}}</p>
                 <h4 ng-if="vm.eventInformation[0].buyLinksExist">Links de Compra:</h4>
-                <p><a href="{{vm.event.url}}" target="_blank">{{vm.event.url}}</a></p>
-                <p><a href="{{vm.event._embedded.venues[0].url}}" target="_blank">{{vm.event._embedded.venues["0"].url}}</a></p>
+                <p class="buyLinks"><a href="{{vm.event.url}}" target="_blank">{{vm.event.url}}</a></p>
+                <p class="buyLinks"><a href="{{vm.event._embedded.venues[0].url}}" target="_blank">{{vm.event._embedded.venues["0"].url}}</a></p>
             </div>
             <div ng-if="vm.event._embedded.venues['0'].location.latitude" class="map container container col-xs-12 col-sm-6">
                 <ng-map center="[{{vm.eventInformation['0'].latitude}}, {{vm.eventInformation['0'].longitude}}]">
-                     <marker position= "{{vm.eventInformation['0'].latitude}}, {{vm.eventInformation['0'].longitude}}"></marker>
+                    <marker position="{{vm.eventInformation['0'].latitude}}, {{vm.eventInformation['0'].longitude}}"></marker>
                 </ng-map>
             </div>
         </div>
