@@ -1,13 +1,13 @@
 <div class="container pageContent">
     <div class="eventCont row">
-        <div class="eventNotFound col-xs-12 col-sm-9" ng-show="show">
+        <div class="eventNotFound col-xs-12 col-sm-9" ng-show="vm.show">
             <div class="thumbnail">
                 <h3>
                     EVENT NOT AVAILABLE
                 </h3>
             </div>
         </div>
-        <div class="eventCont col-xs-12 col-sm-9" ng-hide="show">
+        <div class="eventCont col-xs-12 col-sm-9" ng-hide="vm.show">
             <div ng-repeat="event in vm.events">
                 <ul class="event-list">
                     <li>
@@ -38,7 +38,6 @@
             </div>
             <div class="col-xs-12 eventsAside">
                 <div ng-repeat="aside in vm.asides" class="thumbnail">
-                    <!-- <img src="..." alt="..."> -->
                     <div class="caption">
                         <a ng-href="#!/event/{{aside.id}}"><h3>{{aside.name}}</h3></a>
                         <p>{{event.id}}</p>

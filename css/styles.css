@@ -40,7 +40,8 @@ header {
     padding-bottom: 20px;
     padding-left: 20px;
     color: white;
-    font-size: 20px; }
+    font-size: 30px;
+    font-weight: bold; }
 
 footer {
   margin-top: 100px;
@@ -58,7 +59,7 @@ footer {
       padding-right: 30px;
       font-size: 15px;
       font-weight: bold; }
-      footer ul li a {
+      footer ul li a, footer ul li a:visited, footer ul li a:focus, footer ul li a:active {
         text-decoration: none;
         color: #CCC; }
       footer ul li a:hover {
