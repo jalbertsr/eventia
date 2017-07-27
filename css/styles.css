@@ -65,27 +65,10 @@ body {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   font-family: 'Roboto', sans-serif; }
 
-.thumbnail {
-  position: relative; }
-
 .thumbnail img {
   height: 200px;
   background-size: cover;
   background-position: center center; }
-
-.caption {
-  margin-top: -30px; }
-  .caption h3 {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden; }
-  .caption a {
-    text-decoration: none;
-    color: inherit; }
-  .caption a:hover {
-    color: #999; }
-  .caption p {
-    line-height: 12px; }
 
 .imageContainer {
   width: 100%;
