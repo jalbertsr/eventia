@@ -126,20 +126,7 @@ body {
 
   nav {
     padding-left: 30px; } }
-/* 
-
-@media(min-width: 320px) and (max-width: 736px) {
-    .collapse {
-        visibility: visible;
-    }
-    .navCustom {
-        display: none;
-    }
-    .custom-right {
-        display: inline-block;
-    }
-} */
-/*----------------------------------------- end event styles -----------------------------------------------------*/
+/*----------------------------------------- end home styles -----------------------------------------------------*/
 /*----------------------------------------- search styles -----------------------------------------------------*/
 body {
   background-color: gainsboro; }
