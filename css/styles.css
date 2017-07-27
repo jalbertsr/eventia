@@ -13,10 +13,23 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-size: 50px; }
 
-.navbar-inverse {
-  display: flex;
-  justify-content: center;
-  border-radius: 0px; }
+.navbar {
+  padding-left: 30px;
+  border: none;
+  border-radius: 0;
+  background-color: #222;
+  font-weight: bold; }
+
+.navbar-nav li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white; }
+  .navbar-nav li a:hover {
+    color: white !important; }
+  .navbar-nav li a:visited {
+    color: white !important; }
+  .navbar-nav li a:focus {
+    color: white !important; }
 
 .pageContent {
   min-height: 270px; }
@@ -60,15 +73,38 @@ footer {
       footer ul li a:hover {
         text-decoration: none;
         color: #999; }
+      footer ul li a:visited {
+        text-decoration: none; }
+      footer ul li a:focus {
+        text-decoration: none; }
+      footer ul li a:link {
+        text-decoration: none; }
 
 body {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   font-family: 'Roboto', sans-serif; }
 
-.thumbnail img {
-  height: 200px;
-  background-size: cover;
-  background-position: center center; }
+.thumbnail {
+  position: relative; }
+  .thumbnail img {
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    border: 0; }
+  .thumbnail .caption h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  .thumbnail .caption a {
+    text-decoration: none;
+    color: inherit; }
+  .thumbnail .caption a:hover {
+    color: #999; }
+  .thumbnail .caption p {
+    line-height: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
 
 .imageContainer {
   width: 100%;
@@ -78,9 +114,25 @@ body {
   header div h1 {
     display: flex;
     justify-content: center; } }
-@media (min-width: 768px) {
+@media (min-width: 736px) {
   header {
-    padding-left: 60px; } }
+    padding-left: 60px; }
+
+  nav {
+    padding-left: 30px; } }
+/* 
+
+@media(min-width: 320px) and (max-width: 736px) {
+    .collapse {
+        visibility: visible;
+    }
+    .navCustom {
+        display: none;
+    }
+    .custom-right {
+        display: inline-block;
+    }
+} */
 /*----------------------------------------- end event styles -----------------------------------------------------*/
 /*----------------------------------------- serach styles -----------------------------------------------------*/
 body {
@@ -107,7 +159,7 @@ body {
     border-radius: 3px;
     border-style: none; }
     .eventsAside .thumbnail .caption h3 {
-      padding-top: 14px;
+      margin-top: 0;
       font-size: 17px;
       color: white;
       font-weight: bold; }
@@ -365,3 +417,14 @@ div.info a {
   font-weight: bold; }
 
 /*----------------------------------------- end event styles -----------------------------------------------------*/
+/*----------------------------------------- start Art/Sports/Music styles -----------------------------------------------------*/
+.sectionSubHeader {
+  margin-bottom: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  text-align: center; }

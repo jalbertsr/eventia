@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="sectionSubHeader">
+      <h2>SPORTS</h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="event in events">
+            <div class="thumbnail">
+                <img class="galleryDiferentHeight" ng-style="{'background-image':'url({{event.images[4].url}})'}" style="width:100%">
+                <div class="caption">
+                    <a ng-href="#!/event/{{event.id}}"><h3>{{event.name}}</h3></a>
+                    <p>{{event._embedded.venues["0"].city.name}}, <strong>{{event._embedded.venues["0"].country.countryCode}}</strong></p>
+                    <p>{{event._embedded.venues["0"].name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

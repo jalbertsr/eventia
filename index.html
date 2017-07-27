@@ -20,11 +20,23 @@
             <a ng-href="#!/"><h1>Eventia</h1></a>
         </div>
     </header>
-    <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container">
-            <a class="navbar-brand" href="#!/">Tickets App</a>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#!/">Home</a>
+                    </li>
                     <li>
                         <a href="#!/music">Music</a>
                     </li>
@@ -38,20 +50,42 @@
                         <a href="#!/sports">Sports</a>
                     </li>
                 </ul>
-                <!-- <ul class="nav navbar-nav navbar-right">
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#!/">Tickets App</a>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="hidden-xs nav navbar-nav navCustom ">
+                    <li>
+                        <a href="#!/music">Music</a>
+                    </li>
+                    <li>
+                        <a href="#!/art">Art & Theatre</a>
+                    </li>
+                    <li>
+                        <a href="#!/festivals">Festivals</a>
+                    </li>
+                    <li>
+                        <a href="#!/sports">Sports</a>
+                    </li>
+                </ul>
+                <ul class="visible-xs-* nav navbar-nav navbar-right custom-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span><span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#!/music">Music</a></li>
                             <li><a href="#!/art-theatre">Art & Theatre</a></li>
-                            <li><a href="#!/festivals">Festivals</a></li>
                             <li><a href="#!/sports">Sports</a></li>
                         </ul>
                     </li>
-                </ul> -->
+                </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
     <ng-view></ng-view>
     <footer>
         <div>

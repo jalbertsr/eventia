@@ -1,14 +1,3 @@
-a {
-    &:link,
-    &:active,
-    &:hover,
-    &:focus,
-    &:visited{
-       text-decoration: none !important;
-        color: inherit; 
-    }
-}
-
 header {
     height: 120px;
     background-color: black;
@@ -29,16 +18,37 @@ header {
     }
 }
 
-.navbar-inverse {
-    display: flex;
-    justify-content: center;
-    border-radius: 0px;
+.navbar {
+    padding-left: 30px;
+    border: none;
+    border-radius: 0;
+    background-color: #222;
+    font-weight: bold;
 }
+
+.navbar-nav {
+    li {
+        a{
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
+            &:hover {
+                color: white !important;
+            }   
+            &:visited{
+                color: white !important;
+            }
+            &:focus{
+                color: white !important;
+            }
+        }
+    }
+}  
+
 
 .pageContent {
     min-height: 270px;
 }
-
 
 /*----------------------------------------- start home styles -----------------------------------------------------*/
 
@@ -85,6 +95,15 @@ footer {
                 text-decoration: none;
                 color: #999;
             }
+            a:visited {
+                text-decoration: none;
+            }
+            a:focus {
+                text-decoration: none;
+            }
+            a:link {
+                text-decoration: none;  
+            }
         }
     }
 }
@@ -94,47 +113,36 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-// .thumbnail>.caption {
-//     h3, h3:active, h3:hover, h3:focus, h3:visited {
-//         text-decoration: none;
-//     }
-//     p, p:active, p:hover, p:focus, p:visited {
-//         text-decoration: none;
-//     }
-// }
-
 .thumbnail {
     position: relative;
 
-}
-
-.thumbnail {
     img {
         height: 200px;
         background-size: cover;
         background-position: center center;
+        border: 0;
+    }
+    .caption {
+        h3 {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover {
+            color: #999;
+        }
+        p {
+            line-height: 12px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     }
 }
-
-.caption {
-    margin-top: 20px;
-    .caption h3 {
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    .caption a {
-        text-decoration: none;
-        color: inherit;
-    }
-    .caption a:hover {
-        color: #999;
-    }
-    .caption p {
-        line-height: 8px
-    }
-}
-
 
 .imageContainer {
     width: 100%;
@@ -152,11 +160,27 @@ body {
     }
 }
 
-@media(min-width: 768px) {
-    header {
-        padding-left: 60px;
+@media(min-width: 736px) {
+     header {
+         padding-left: 60px;
+    }
+    nav {
+        padding-left: 30px;
     }
 }
+/* 
+
+@media(min-width: 320px) and (max-width: 736px) {
+    .collapse {
+        visibility: visible;
+    }
+    .navCustom {
+        display: none;
+    }
+    .custom-right {
+        display: inline-block;
+    }
+} */
 
 
 /*----------------------------------------- end event styles -----------------------------------------------------*/
@@ -194,7 +218,7 @@ body {
         border-style: none;
         .caption {
             h3 {
-                padding-top: 14px;
+                margin-top: 0;
                 font-size: 17px;
                 color: white;
                 font-weight: bold;
@@ -521,11 +545,17 @@ div.info {
 
 /*----------------------------------------- start Art/Sports/Music styles -----------------------------------------------------*/
 
-.other>.thumbnail {
-    display: inline-block;
-    display: flex;
-    flex: wrap;
+
+.sectionSubHeader {
+    margin-bottom: 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    text-align: center;
+
 }
-
-
 
