@@ -4,7 +4,11 @@ header {
     color: white;
     margin: 0;
     div {
-        a, a:active, a:visited, a:hover, a:focus {
+        a,
+        a:active,
+        a:visited,
+        a:hover,
+        a:focus {
             text-decoration: none;
             color: white;
         }
@@ -64,11 +68,10 @@ header {
 //         }
 //     }
 // }  
-
-
 .pageContent {
     min-height: 270px;
 }
+
 
 /*----------------------------------------- start home styles -----------------------------------------------------*/
 
@@ -108,7 +111,10 @@ footer {
             padding-right: 30px;
             font-size: 15px;
             font-weight: bold;
-            a, a:visited, a:focus, a:active {
+            a,
+            a:visited,
+            a:focus,
+            a:active {
                 text-decoration: none;
                 color: #CCC;
             }
@@ -123,7 +129,7 @@ footer {
                 text-decoration: none;
             }
             a:link {
-                text-decoration: none;  
+                text-decoration: none;
             }
         }
     }
@@ -182,13 +188,15 @@ body {
 }
 
 @media(min-width: 736px) {
-     header {
-         padding-left: 60px;
+    header {
+        padding-left: 60px;
     }
     nav {
         padding-left: 30px;
     }
 }
+
+
 /* 
 
 @media(min-width: 320px) and (max-width: 736px) {
@@ -228,7 +236,7 @@ body {
     }
 }
 
-.eventNotFound{
+.eventNotFound {
     border-radius: 3px;
     margin-top: 10px;
     margin-bottom: 50px;
@@ -238,16 +246,16 @@ body {
         border-radius: 3px;
         border-style: none;
         height: 300px;
-            h3 {
-                font-size: 27px;
-                color: white;
-                font-weight: bold;
-                margin-top: 0px;
-                height: 300px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+        h3 {
+            font-size: 27px;
+            color: white;
+            font-weight: bold;
+            margin-top: 0px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 
@@ -536,12 +544,13 @@ div.info {
 }
 
 
+
 /*----------------------------------------- end serach styles -----------------------------------------------------*/
 
 
 /*----------------------------------------- start event styles -----------------------------------------------------*/
 
-.eventCardInfo{
+.eventCardInfo {
     font-family: 'Roboto', sans-serif;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
@@ -551,21 +560,27 @@ div.info {
     h2 {
         margin-top: 5px;
     }
- }
+}
 
-.name{
+p.buyLinks {
+    text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+}
+
+.name {
     h1 {
         margin-top: 5px;
     }
- }
-    
-.miniInfo{
-    box-sizing: border-box;
-    padding-left: 30px
 }
 
-.imgEvent{
-    img{
+.miniInfo {
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.imgEvent {
+    img {
         height: 350px;
         width: 100%;
         background-size: cover;
@@ -577,27 +592,28 @@ div.info {
 .map {
     margin-bottom: 10px
 }
-.eventCardInfo{
-    p{
+
+.eventCardInfo {
+    p {
         margin-left: 10px
     }
-
 }
 
-.miniInfo{
-    span{
+.miniInfo {
+    span {
         font-weight: bold;
     }
 }
 
 
-.eventCardInfo{
-    a{
+.eventCardInfo {
+    a {
         text-decoration: none;
         color: white;
         font-style: italic;
     }
 }
+
 
 /*----------------------------------------- end event styles -----------------------------------------------------*/
 
@@ -614,5 +630,4 @@ div.info {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     text-align: center;
-
 }
