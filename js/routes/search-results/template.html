@@ -38,8 +38,10 @@
             </div>
             <div class="col-xs-12 eventsAside">
                 <div ng-repeat="aside in asides" class="thumbnail">
+                    <!-- <img src="..." alt="..."> -->
                     <div class="caption">
-                        <h3>{{aside.name}}</h3>
+                        <a ng-href="#!/event/{{aside.id}}"><h3>{{aside.name}}</h3></a>
+                        <p>{{event.id}}</p>
                         <p class="desc">{{aside._embedded.venues["0"].name}}</p>
                         <p class="desc">{{aside._embedded.venues["0"].city.name}}</p>
                     </div>
@@ -47,4 +49,3 @@
             </div>
         </div>
     </div>
-</div>

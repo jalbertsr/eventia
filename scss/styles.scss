@@ -1,3 +1,14 @@
+a {
+    &:link,
+    &:active,
+    &:hover,
+    &:focus,
+    &:visited{
+       text-decoration: none !important;
+        color: inherit; 
+    }
+}
+
 header {
     height: 120px;
     background-color: black;
@@ -92,12 +103,35 @@ body {
 //     }
 // }
 
+.thumbnail {
+    position: relative;
+
+}
 
 .thumbnail {
     img {
         height: 200px;
         background-size: cover;
         background-position: center center;
+    }
+}
+
+.caption {
+    margin-top: 20px;
+    .caption h3 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .caption a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .caption a:hover {
+        color: #999;
+    }
+    .caption p {
+        line-height: 8px
     }
 }
 
@@ -506,5 +540,16 @@ div.info {
     }
 }
 
-
 /*----------------------------------------- end event styles -----------------------------------------------------*/
+
+
+/*----------------------------------------- start Art/Sports/Music styles -----------------------------------------------------*/
+
+.other>.thumbnail {
+    display: inline-block;
+    display: flex;
+    flex: wrap;
+}
+
+
+
