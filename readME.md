@@ -6,7 +6,7 @@
 
 # EVENTIA 
 
-Finsih description project
+Eventia is a web page that helps you find events and give you information about ii.
 
 
 
