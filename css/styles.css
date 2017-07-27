@@ -364,4 +364,9 @@ div.info a {
 .miniInfo span {
   font-weight: bold; }
 
+.eventCardInfo a {
+  text-decoration: none;
+  color: white;
+  font-style: italic; }
+
 /*----------------------------------------- end event styles -----------------------------------------------------*/

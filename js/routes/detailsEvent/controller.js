@@ -23,8 +23,11 @@ angular.module('tickets-app')
           var endHourSales2 = endHourSales1[0].split('T')
           var endHourSalesFinale = endHourSales2[1] + ':' + endHourSales1[1]
           var adrees = response.data._embedded.venues['0'].address.line1 + ', ' + response.data._embedded.venues['0'].postalCode + ', ' + response.data._embedded.venues['0'].city.name + ', ' + response.data._embedded.venues['0'].country.name
-          // var info
-          console.log(adrees)
+          var buyLinksExist = false
+
+          if (response.data._embedded.venues[0].url || response.data.url) buyLinksExist = true
+
+          console.log('buyLinksExist=' + buyLinksExist)
 
           $scope.latitude = response.data._embedded.venues['0'].location.latitude
           $scope.longitude = response.data._embedded.venues['0'].location.longitude
@@ -36,7 +39,8 @@ angular.module('tickets-app')
             localTime: time,
             salesStart: startDateSalesFinal + startHourSalesFinale,
             salesEnd: endDateSalesFinal + endHourSalesFinale,
-            adrees: adrees
+            adrees: adrees,
+            buyLinksExist: buyLinksExist
           })
         })
   })
