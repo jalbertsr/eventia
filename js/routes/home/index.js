@@ -3,5 +3,5 @@ angular.module('tickets-app')
   $routeProvider
 	.when('/', {
   		templateUrl: 'js/routes/home/template.html'
-	})
+})
 })
