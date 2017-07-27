@@ -1,3 +1,7 @@
+a:link, a:active, a:hover, a:focus, a:visited {
+  text-decoration: none !important;
+  color: inherit; }
+
 header {
   height: 120px;
   background-color: black;
@@ -65,10 +69,27 @@ body {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   font-family: 'Roboto', sans-serif; }
 
+.thumbnail {
+  position: relative; }
+
 .thumbnail img {
   height: 200px;
   background-size: cover;
   background-position: center center; }
+
+.caption {
+  margin-top: 20px; }
+  .caption .caption h3 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  .caption .caption a {
+    text-decoration: none;
+    color: inherit; }
+  .caption .caption a:hover {
+    color: #999; }
+  .caption .caption p {
+    line-height: 8px; }
 
 .imageContainer {
   width: 100%;
@@ -82,7 +103,7 @@ body {
   header {
     padding-left: 60px; } }
 /*----------------------------------------- end event styles -----------------------------------------------------*/
-/*----------------------------------------- serach styles -----------------------------------------------------*/
+/*----------------------------------------- search styles -----------------------------------------------------*/
 body {
   background-color: gainsboro; }
 
@@ -96,6 +117,26 @@ body {
     font-size: 24px;
     font-weight: bold; }
 
+.eventNotFound {
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 50px; }
+  .eventNotFound .thumbnail {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 15px;
+    border-radius: 3px;
+    border-style: none;
+    height: 300px; }
+    .eventNotFound .thumbnail h3 {
+      font-size: 27px;
+      color: white;
+      font-weight: bold;
+      margin-top: 0px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+
 .eventsAside {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 3px;
@@ -107,10 +148,11 @@ body {
     border-radius: 3px;
     border-style: none; }
     .eventsAside .thumbnail .caption h3 {
-      padding-top: 14px;
+      padding-top: 10px;
       font-size: 17px;
       color: white;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-top: 0px; }
     .eventsAside .thumbnail .caption p {
       font-size: 12px;
       color: white;
@@ -370,3 +412,8 @@ div.info a {
   font-style: italic; }
 
 /*----------------------------------------- end event styles -----------------------------------------------------*/
+/*----------------------------------------- start Art/Sports/Music styles -----------------------------------------------------*/
+.other > .thumbnail {
+  display: inline-block;
+  display: flex;
+  flex: wrap; }

@@ -1,3 +1,14 @@
+a {
+    &:link,
+    &:active,
+    &:hover,
+    &:focus,
+    &:visited{
+       text-decoration: none !important;
+        color: inherit; 
+    }
+}
+
 header {
     height: 120px;
     background-color: black;
@@ -92,12 +103,35 @@ body {
 //     }
 // }
 
+.thumbnail {
+    position: relative;
+
+}
 
 .thumbnail {
     img {
         height: 200px;
         background-size: cover;
         background-position: center center;
+    }
+}
+
+.caption {
+    margin-top: 20px;
+    .caption h3 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .caption a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .caption a:hover {
+        color: #999;
+    }
+    .caption p {
+        line-height: 8px
     }
 }
 
@@ -128,11 +162,12 @@ body {
 /*----------------------------------------- end event styles -----------------------------------------------------*/
 
 
-/*----------------------------------------- serach styles -----------------------------------------------------*/
+/*----------------------------------------- search styles -----------------------------------------------------*/
 
 body {
     background-color: rgb(220, 220, 220);
 }
+
 
 .event-list {
     list-style: none;
@@ -148,6 +183,29 @@ body {
     }
 }
 
+.eventNotFound{
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    .thumbnail {
+        background-color: rgba(0, 0, 0, 0.3);
+        margin-top: 15px;
+        border-radius: 3px;
+        border-style: none;
+        height: 300px;
+            h3 {
+                font-size: 27px;
+                color: white;
+                font-weight: bold;
+                margin-top: 0px;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    }
+}
+
 .eventsAside {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
@@ -160,10 +218,11 @@ body {
         border-style: none;
         .caption {
             h3 {
-                padding-top: 14px;
+                padding-top: 10px;
                 font-size: 17px;
                 color: white;
                 font-weight: bold;
+                margin-top: 0px;
             }
             p {
                 font-size: 12px;
@@ -187,7 +246,6 @@ body {
         display: flex;
         justify-content: center;
         color: white;
-        // font-weight: bold;
     }
 }
 
@@ -482,6 +540,7 @@ div.info {
     }
 }
 
+
 .eventCardInfo{
     a{
         text-decoration: none;
@@ -490,6 +549,13 @@ div.info {
     }
 }
 
-
-
 /*----------------------------------------- end event styles -----------------------------------------------------*/
+
+
+/*----------------------------------------- start Art/Sports/Music styles -----------------------------------------------------*/
+
+.other>.thumbnail {
+    display: inline-block;
+    display: flex;
+    flex: wrap;
+}
