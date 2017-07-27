@@ -19,17 +19,15 @@ header {
   border-radius: 0;
   background-color: #222;
   font-weight: bold; }
-
-.navbar-nav li a {
-  text-decoration: none;
-  font-size: 15px;
-  color: white; }
-  .navbar-nav li a:hover {
+  .navbar ul li a {
+    font-size: 15px;
     color: white !important; }
-  .navbar-nav li a:visited {
-    color: white !important; }
-  .navbar-nav li a:focus {
-    color: white !important; }
+  .navbar ul li a:hover {
+    color: #84fab0 !important; }
+  .navbar ul li a:active {
+    color: #84fab0 !important; }
+  .navbar ul li a:focus {
+    color: #84fab0 !important; }
 
 .pageContent {
   min-height: 270px; }
@@ -412,11 +410,13 @@ div.info a {
   color: white;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  padding-top: 10px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  padding: 20px; }
+  .eventCardInfo h2 {
+    margin-top: 5px; }
 
-.name {
-  padding-left: 5px; }
+.name h1 {
+  margin-top: 5px; }
 
 .miniInfo {
   box-sizing: border-box;
