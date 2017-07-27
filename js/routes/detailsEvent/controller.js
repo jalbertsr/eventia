@@ -38,8 +38,10 @@ angular.module('tickets-app')
 
           console.log('buyLinksExist=' + buyLinksExist)
 
-          $scope.latitude = response.data._embedded.venues['0'].location.latitude
-          $scope.longitude = response.data._embedded.venues['0'].location.longitude
+          if (response.data._embedded.venues['0'].location) {
+            $scope.latitude = response.data._embedded.venues['0'].location.latitude
+            $scope.longitude = response.data._embedded.venues['0'].location.longitude
+          }
 
           $scope.eventInformation.push({
             localDate: date,
