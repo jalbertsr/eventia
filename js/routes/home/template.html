@@ -1,12 +1,14 @@
 <div class="container">
     <div class="row" ng-controller="searchController">
         <div class="col-lg-10 col-md-offset-1 col-lg-offset-1 col-md-10 search">
+            <form ng-submit="getKeyword()">
             <div class="input-group inputSearch">
-                <input ng-model="keyword"  type="text" class="input-lg form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                    <button ng-click="getKeyword()" class="input-lg btn btn-default" type="button">Go!</button>
-                </span>
-            </div>
+                            <input ng-model="keyword" type="text" class="input-lg form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button ng-click="getKeyword()" class="input-lg btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div>
+                        </form>
         </div>
     </div>
 </div>
@@ -41,7 +43,7 @@
         </div>
         <div class="container row eventBox">
             <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="event in events">
-                <div class="thumbnail" >
+                <div class="thumbnail">
                     <div class="imageContainer">
                         <img ng-style="{'background-image':'url({{event.images[4].url}})'}" style="width: 100%">
                     </div>
@@ -74,7 +76,7 @@
     </div> -->
     <!-- end of Popular -->
     <!-- start of Relevant -->
-   <!--  <div class="events" ng-controller="relevantController">
+    <!--  <div class="events" ng-controller="relevantController">
         <div>
             <h1>RELEVANT</h1>
         </div>

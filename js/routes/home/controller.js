@@ -1,5 +1,9 @@
 angular.module('tickets-app')
     .controller('searchController', function ($scope, $location) {
+      $scope.enterPresed = function () {
+
+      }
+
       $scope.getKeyword = function () {
         var keyword = $scope.keyword
         $location.path('/search/' + keyword)
