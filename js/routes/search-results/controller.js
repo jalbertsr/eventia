@@ -2,6 +2,7 @@
      .controller('SearchController', function ($scope, $routeParams, $rootScope, dataService) {
        var keyword = $routeParams.keyword
        var countryCode = ''
+       $scope.show = false
          // var lengthEvents
        console.log(keyword)
 
@@ -24,7 +25,10 @@
              .then(function (response) {
                console.log(response)
                $scope.events = []
-               if (!response.data._embedded) { console.log('event not available') } else {
+               if (!response.data._embedded) {
+                 console.log('event not available')
+                 $scope.show = true
+               } else {
                  var eventsResponse = response.data._embedded.events
                  eventsResponse.forEach(function (obj) {
                    var localDate = obj.dates.start.localDate
@@ -36,7 +40,9 @@
                    if (digitOne == 0) var day = digitTwo
                    else var day = parseday
 
-                   if (obj._embedded.attractions && obj._embedded.attractions[0].externalLinks && obj._embedded.attractions[0].externalLinks.facebook) {
+                   if (obj._embedded.attractions && obj._embedded.attractions[0].externalLinks &&
+                       obj._embedded.attractions[0].externalLinks.facebook && obj._embedded.attractions[0].externalLinks.twitter &&
+                       obj._embedded.attractions[0].externalLinks.homepage) {
                      var facebookUrl = obj._embedded.attractions[0].externalLinks.facebook[0].url
                      var twitterUrl = obj._embedded.attractions[0].externalLinks.twitter[0].url
                      var artistUrl = obj._embedded.attractions[0].externalLinks.homepage[0].url
@@ -60,8 +66,7 @@
                    })
                  })
                }
-               console.log($scope.events)
-               lengthEvents = $scope.events.length
+               var lengthEvents = $scope.events.length
                console.log(lengthEvents + ' event found')
              })
 
@@ -71,12 +76,12 @@
                countryCode = response.data.country_code
                $rootScope.$broadcast('countryCodeReady', { countryCode: countryCode })
              })
+
        $scope.$on('countryCodeReady', function (e, data) {
          dataService.getLocalEvents(data.countryCode)
                  .then(function (response) {
                    console.log(response)
                    $scope.asides = response.data._embedded.events
-                     // localEvents.splice(0, lengthEvents)
                  })
        })
      })
