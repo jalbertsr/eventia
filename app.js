@@ -1,4 +1,6 @@
-angular.module('tickets-app',[
+/* global angular */
+
+angular.module('tickets-app', [
   'ngRoute',
   'ngMap'
 ])

@@ -1,48 +1,44 @@
-<!-- <p>{{4+6}}</p> -->
 <div class="container">
     <!-- Start of imgImportantInfo -->
-
-    <!-- <div class="info container"> -->
-
     <div class="eventCardInfo">
         <div class="row">
             <div class="imgEvent container col-xs-12 col-sm-6" >
-                <img style="background-image:url({{event.images[9].url}})">
+                <img style="background-image:url({{vm.event.images[9].url}})">
             </div>
             <div class="col-xs-12 col-sm-6">
                 <div class="row">
                     <div class="name col-xs-12">
-                        <h1>{{event.name}}</h1>
+                        <h1>{{vm.event.name}}</h1>
                     </div>
                     <div class="row">
                         <div class="col-xs-6 miniInfo">
                             <h4>Date:</h4>
-                            <p>{{eventInformation[0].localDate}}</p>
+                            <p>{{vm.eventInformation[0].localDate}}</p>
                         </div>
                         <div class="col-xs-6 miniInfo">
                             <h4>Start Time:</h4>
-                            <p>{{eventInformation[0].localTime}}</p>
+                            <p>{{vm.eventInformation[0].localTime}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6 miniInfo">
                             <h4>Sales:</h4>
-                            <p><span>Opens: </span>{{eventInformation[0].salesStart}}</p>
-                            <p><span>Closes: </span>{{eventInformation[0].salesEnd}}</p>
+                            <p><span>Opens: </span>{{vm.eventInformation[0].salesStart}}</p>
+                            <p><span>Closes: </span>{{vm.eventInformation[0].salesEnd}}</p>
                         </div>
                         <div class="col-xs-6 miniInfo">
                             <h4>Adress:</h4>
-                            <p>{{eventInformation[0].adrees}}</p>
+                            <p>{{vm.eventInformation[0].adress}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6 miniInfo">
                             <h4>Ticket Status:</h4>
-                            <p>{{event.dates.status.code}}</p>
+                            <p>{{vm.event.dates.status.code}}</p>
                         </div>
                         <div class="col-xs-6 miniInfo">
                             <h4>Prize Range:</h4>
-                            <p>{{event.priceRanges["0"].min}}$ - {{event.priceRanges["0"].max}}$</p>
+                            <p>{{vm.event.priceRanges["0"].min}}$ - {{vm.event.priceRanges["0"].max}}$</p>
                         </div>
                     </div>
                 </div>
@@ -55,20 +51,20 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6">
             	<h2>General Info:</h2>
-                <p>{{event.info}}</p>
-                <h4 ng-if='event.accessibility.info'>Accessibility:</h4>
-                <p>{{event.accessibility.info}}</p>
-                <h4 ng-if='event._embedded.venues[0].boxOfficeInfo.openHoursDetail'>Box Office Info:</h4>
-                <p>{{event._embedded.venues[0].boxOfficeInfo.openHoursDetail}}</p>
-                <h4 ng-if='event.promoter.description'>Promoter:</h4>
-                <p>{{event.promoter.description}}</p>
-                <h4 ng-if="eventInformation[0].buyLinksExist">Links de Compra:</h4>
-                <p><a href="{{event.url}}" target="_blank">{{event.url}}</a></p>
-                <p><a href="{{event._embedded.venues[0].url}}" target="_blank">{{event._embedded.venues["0"].url}}</a></p>
+                <p>{{vm.event.info}}</p>
+                <h4 ng-if='vm.event.accessibility.info'>Accessibility:</h4>
+                <p>{{vm.event.accessibility.info}}</p>
+                <h4 ng-if='vm.event._embedded.venues[0].boxOfficeInfo.openHoursDetail'>Box Office Info:</h4>
+                <p>{{vm.event._embedded.venues[0].boxOfficeInfo.openHoursDetail}}</p>
+                <h4 ng-if='vm.event.promoter.description'>Promoter:</h4>
+                <p>{{vm.event.promoter.description}}</p>
+                <h4 ng-if="vm.eventInformation[0].buyLinksExist">Links de Compra:</h4>
+                <p><a href="{{vm.event.url}}" target="_blank">{{vm.event.url}}</a></p>
+                <p><a href="{{vm.event._embedded.venues[0].url}}" target="_blank">{{vm.event._embedded.venues["0"].url}}</a></p>
             </div>
-            <div ng-if="event._embedded.venues['0'].location.latitude" class="map container container col-xs-12 col-sm-6">
-                <ng-map center="[{{latitude}}, {{longitude}}]">
-                     <marker position= "{{latitude}}, {{longitude}}"></marker>
+            <div ng-if="vm.event._embedded.venues['0'].location.latitude" class="map container container col-xs-12 col-sm-6">
+                <ng-map center="[{{vm.eventInformation['0'].latitude}}, {{vm.eventInformation['0'].longitude}}]">
+                     <marker position= "{{vm.eventInformation['0'].latitude}}, {{vm.eventInformation['0'].longitude}}"></marker>
                 </ng-map>
             </div>
         </div>

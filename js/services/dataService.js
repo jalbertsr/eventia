@@ -1,37 +1,25 @@
-(function() {
+/* global angular */
 
+(function () {
   var apiKey = 'bYHVec5iZZLcVLX9LTAK3Ipovub0RRvD'
 
   var urlSearch = 'https://app.ticketmaster.com/discovery/v2/events.json?keyword=<%KEYWORD%>&apikey=' + apiKey
 
-  var urlEvents = 'https://app.ticketmaster.com/discovery/v2/events.json?startDateTime=<%DATE%>&apikey=' + apiKey
+  var urlDailyEvents = 'https://app.ticketmaster.com/discovery/v2/events.json?startDateTime=<%DATE%>&apikey=' + apiKey
 
+  var urlLocalEvents = 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=<%COUNTRY%>&apikey=' + apiKey
+
+  var urlEvents = 'https://app.ticketmaster.com/discovery/v2/events/<%IDEVENT%>.json?apikey=' + apiKey
 
   angular.module('tickets-app')
       .factory('dataService', function ($http) {
-
-        var months = {
-          '01': 'JAN',
-          '02': 'FEB',
-          '03': 'MAR',
-          '04': 'APR',
-          '05': 'MAY',
-          '06': 'JUN',
-          '07': 'JUL',
-          '08': 'AUG',
-          '09': 'SEPT',
-          '10': 'OCT',
-          '11': 'NOV',
-          '12': 'DEC'
-        }
-
         function getKeywordSearch (keyword) {
           var url = urlSearch.replace('<%KEYWORD%>', keyword)
           return $http.get(url)
         }
 
         function getDaily (date) {
-          var url = urlEvents.replace('<%DATE%>', date)
+          var url = urlDailyEvents.replace('<%DATE%>', date)
           return $http.get(url)
         }
 
@@ -41,7 +29,7 @@
         }
 
         function getEvent (idEvent) {
-          var url = 'https://app.ticketmaster.com/discovery/v2/events/' + idEvent + '.json?apikey=' + apiKey
+          var url = urlEvents.replace('<%IDEVENT%>', idEvent)
           return $http.get(url)
         }
 
@@ -51,8 +39,7 @@
         }
 
         function getLocalEvents (countryCode) {
-          var url = 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=' + countryCode + '&apikey=' + apiKey
-          console.log(countryCode)
+          var url = urlLocalEvents.replace('<%COUNTRY%>', countryCode)
           return $http.get(url)
         }
 
@@ -72,7 +59,6 @@
         }
 
         return {
-          months: months,
           getKeywordSearch: getKeywordSearch,
           getDaily: getDaily,
           getPopular: getPopular,
@@ -84,9 +70,4 @@
           getSportsEvents: getSportsEvents
         }
       })
-
-
 })()
-
-//
-

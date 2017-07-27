@@ -1,8 +1,8 @@
-(function() {
+/* global angular */
 
+(function () {
   angular.module('tickets-app')
-    .factory('utilsService', function() {
-
+    .factory('utilsService', function () {
       var months = {
         '01': 'JAN',
         '02': 'FEB',
@@ -17,9 +17,7 @@
         '11': 'NOV',
         '12': 'DEC'
       }
-
-      function customizeDataEvent(eventApi) {
-
+      function customizeDataEvent (eventApi) {
         var localDate = eventApi.dates.start.localDate
         var parseMonth = localDate.split('-')[1]
         var month = months[parseMonth]
@@ -41,26 +39,22 @@
           var artistUrl = ''
         }
 
-       return {
-           month: month,
-           day: day,
-           name: eventApi.name,
-           country: eventApi._embedded.venues[0].country.name,
-           city: eventApi._embedded.venues[0].city.name,
-           imageUrl: eventApi.images[0].url,
-           id: eventApi.id,
-           facebookUrl: facebookUrl,
-           twitterUrl: twitterUrl,
-           artistUrl: artistUrl
-         }
-
+        return {
+          month: month,
+          day: day,
+          name: eventApi.name,
+          country: eventApi._embedded.venues[0].country.name,
+          city: eventApi._embedded.venues[0].city.name,
+          imageUrl: eventApi.images[0].url,
+          id: eventApi.id,
+          facebookUrl: facebookUrl,
+          twitterUrl: twitterUrl,
+          artistUrl: artistUrl
+        }
       }
 
       return {
         customizeDataEvent: customizeDataEvent
       }
-
-  })
-
+    })
 })()
-

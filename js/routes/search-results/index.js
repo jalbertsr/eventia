@@ -1,3 +1,5 @@
+ /* global angular */
+
  angular.module('tickets-app')
    .config(function ($routeProvider) {
      $routeProvider

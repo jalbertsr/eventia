@@ -1,9 +1,10 @@
-angular.module('tickets-app')
-  .config(function( $routeProvider ) {
+/* global angular */
 
+angular.module('tickets-app')
+  .config(function ($routeProvider) {
     $routeProvider
-      .when('/music', {
-        templateUrl: 'js/routes/music/template.html',
-        controller: 'musicController'
-      })
+     .when('/music', {
+       templateUrl: 'js/routes/music/template.html',
+       controller: 'musicController'
+     })
   })
