@@ -1,10 +1,9 @@
 <div class="container pageContent">
     <div class="eventCont row">
         <div class="eventCont col-xs-12 col-sm-9">
-        <div ng-show="show">
-            NOT FOUNDDDD!!!!
-            MODIFICAR DIV CSS PARA ADAPTAR Y QUE EL ASIDE NO SE LO COMA
-        </div>
+            <div ng-show="show">
+                NOT FOUNDDDD!!!! MODIFICAR DIV CSS PARA ADAPTAR Y QUE EL ASIDE NO SE LO COMA
+            </div>
             <div ng-repeat="event in events">
                 <ul class="event-list">
                     <li>
@@ -30,13 +29,14 @@
             </div>
         </div>
         <div class="titleLocalEvents col-xs-12 col-sm-3">
-                <h3>LOCAL EVENTS</h3>
+            <h3>LOCAL EVENTS</h3>
         </div>
         <div class="col-xs-12 col-sm-3 eventsAside">
             <div ng-repeat="aside in asides" class="thumbnail">
                 <!-- <img src="..." alt="..."> -->
                 <div class="caption">
-                    <h3>{{aside.name}}</h3>
+                    <a ng-href="#!/event/{{aside.id}}"><h3>{{aside.name}}</h3></a>
+                    <p>{{event.id}}</p>
                     <p class="desc">{{aside._embedded.venues["0"].name}}</p>
                     <p class="desc">{{aside._embedded.venues["0"].city.name}}</p>
                 </div>
