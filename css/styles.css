@@ -49,7 +49,8 @@ header {
     padding-bottom: 20px;
     padding-left: 20px;
     color: white;
-    font-size: 20px; }
+    font-size: 30px;
+    font-weight: bold; }
 
 footer {
   margin-top: 100px;
@@ -67,7 +68,7 @@ footer {
       padding-right: 30px;
       font-size: 15px;
       font-weight: bold; }
-      footer ul li a {
+      footer ul li a, footer ul li a:visited, footer ul li a:focus, footer ul li a:active {
         text-decoration: none;
         color: #CCC; }
       footer ul li a:hover {
@@ -134,7 +135,7 @@ body {
     }
 } */
 /*----------------------------------------- end event styles -----------------------------------------------------*/
-/*----------------------------------------- serach styles -----------------------------------------------------*/
+/*----------------------------------------- search styles -----------------------------------------------------*/
 body {
   background-color: gainsboro; }
 
@@ -147,6 +148,26 @@ body {
   .event-list .info h2 {
     font-size: 24px;
     font-weight: bold; }
+
+.eventNotFound {
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 50px; }
+  .eventNotFound .thumbnail {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 15px;
+    border-radius: 3px;
+    border-style: none;
+    height: 300px; }
+    .eventNotFound .thumbnail h3 {
+      font-size: 27px;
+      color: white;
+      font-weight: bold;
+      margin-top: 0px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
 
 .eventsAside {
   background-color: rgba(0, 0, 0, 0.3);
@@ -162,7 +183,8 @@ body {
       margin-top: 0;
       font-size: 17px;
       color: white;
-      font-weight: bold; }
+      font-weight: bold;
+      margin-top: 0px; }
     .eventsAside .thumbnail .caption p {
       font-size: 12px;
       color: white;
@@ -415,6 +437,11 @@ div.info a {
 
 .miniInfo span {
   font-weight: bold; }
+
+.eventCardInfo a {
+  text-decoration: none;
+  color: white;
+  font-style: italic; }
 
 /*----------------------------------------- end event styles -----------------------------------------------------*/
 /*----------------------------------------- start Art/Sports/Music styles -----------------------------------------------------*/
