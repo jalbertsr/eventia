@@ -5,7 +5,7 @@ a {
     &:focus,
     &:visited{
        text-decoration: none !important;
-        color: inherit; 
+        color: inherit;
     }
 }
 
@@ -118,19 +118,19 @@ body {
 
 .caption {
     margin-top: 20px;
-    .caption h3 {
+    h3 {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
     }
-    .caption a {
+    a {
         text-decoration: none;
         color: inherit;
     }
-    .caption a:hover {
+    a:hover {
         color: #999;
     }
-    .caption p {
+    p {
         line-height: 8px
     }
 }
@@ -508,7 +508,7 @@ div.info {
 .name{
     padding-left: 5px;
  }
-  
+
 .miniInfo{
     box-sizing: border-box;
     padding-left: 30px
@@ -531,12 +531,21 @@ div.info {
     p{
         margin-left: 10px
     }
-    
+
 }
 
 .miniInfo{
     span{
         font-weight: bold;
+    }
+}
+
+
+.eventCardInfo{
+    a{
+        text-decoration: none;
+        color: white;
+        font-style: italic;
     }
 }
 
@@ -550,6 +559,3 @@ div.info {
     display: flex;
     flex: wrap;
 }
-
-
-

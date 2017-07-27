@@ -3,6 +3,7 @@
      $routeProvider
        .when('/search/:keyword', {
          templateUrl: 'js/routes/search-results/template.html',
-         controller: 'SearchController'
+         controller: 'SearchController',
+         controllerAs: 'vm'
        })
    })

@@ -79,16 +79,16 @@ body {
 
 .caption {
   margin-top: 20px; }
-  .caption .caption h3 {
+  .caption h3 {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden; }
-  .caption .caption a {
+  .caption a {
     text-decoration: none;
     color: inherit; }
-  .caption .caption a:hover {
+  .caption a:hover {
     color: #999; }
-  .caption .caption p {
+  .caption p {
     line-height: 8px; }
 
 .imageContainer {
@@ -405,6 +405,11 @@ div.info a {
 
 .miniInfo span {
   font-weight: bold; }
+
+.eventCardInfo a {
+  text-decoration: none;
+  color: white;
+  font-style: italic; }
 
 /*----------------------------------------- end event styles -----------------------------------------------------*/
 /*----------------------------------------- start Art/Sports/Music styles -----------------------------------------------------*/

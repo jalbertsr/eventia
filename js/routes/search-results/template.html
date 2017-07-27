@@ -3,12 +3,12 @@
         <div class="eventNotFound col-xs-12 col-sm-9" ng-show="show">
             <div class="thumbnail">
                 <h3>
-                    EVENT NOT AVAILABLE 
+                    EVENT NOT AVAILABLE
                 </h3>
             </div>
         </div>
         <div class="eventCont col-xs-12 col-sm-9" ng-hide="show">
-            <div ng-repeat="event in events">
+            <div ng-repeat="event in vm.events">
                 <ul class="event-list">
                     <li>
                         <time>
@@ -37,7 +37,7 @@
                 <h3>LOCAL EVENTS</h3>
             </div>
             <div class="col-xs-12 eventsAside">
-                <div ng-repeat="aside in asides" class="thumbnail">
+                <div ng-repeat="aside in vm.asides" class="thumbnail">
                     <!-- <img src="..." alt="..."> -->
                     <div class="caption">
                         <a ng-href="#!/event/{{aside.id}}"><h3>{{aside.name}}</h3></a>

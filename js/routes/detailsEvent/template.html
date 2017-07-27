@@ -62,6 +62,9 @@
                 <p>{{event._embedded.venues[0].boxOfficeInfo.openHoursDetail}}</p>
                 <h4 ng-if='event.promoter.description'>Promoter:</h4>
                 <p>{{event.promoter.description}}</p>
+                <h4 ng-if="eventInformation[0].buyLinksExist">Links de Compra:</h4>
+                <p><a href="{{event.url}}">{{event.url}}</a></p>
+                <p><a href="{{event._embedded.venues[0].url}}">{{event._embedded.venues["0"].url}}</a></p>
             </div>
             <div class="map container container col-xs-12 col-sm-6">
                 <ng-map center="[{{latitude}}, {{longitude}}]">
