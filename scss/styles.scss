@@ -1,58 +1,6 @@
-header {
-    height: 120px;
-    background-color: black;
-    color: white;
-    margin: 0;
-    div {
-        a,
-        a:active,
-        a:visited,
-        a:hover,
-        a:focus {
-            text-decoration: none;
-            color: white;
-        }
-        h1 {
-            margin-top: 0;
-            padding-top: 40px;
-            padding-bottom: 10px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 50px;
-        }
-    }
-}
+@import 'common';
 
-.navbar {
-    padding-left: 30px;
-    border: none;
-    border-radius: 0;
-    background-color: #222;
-    font-weight: bold;
-    ul {
-        li {
-            a {
-                font-size: 15px;
-                color: white !important;
-            }
-            a:hover {
-                color: #84fab0 !important;
-            }
-            a:active {
-                color: #84fab0 !important;
-            }
-            a:focus {
-                color: #84fab0 !important;
-            }
-        }
-    }
-}
-
-.pageContent {
-    min-height: 270px;
-}
-
-
-/*----------------------------------------- start home styles -----------------------------------------------------*/
+/* @begin HOME */
 
 .search {
     height: 120px;
@@ -64,7 +12,7 @@ header {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     padding-top: 10px;
-    margin-bottom: 50px; // box-shadow: 2px 2px 5px #888888;
+    margin-bottom: 50px;
     h1 {
         padding-bottom: 20px;
         padding-left: 20px;
@@ -74,54 +22,8 @@ header {
     }
 }
 
-footer {
-    margin-top: 100px;
-    height: 150px;
-    background-color: black;
-    color: white;
-    ul {
-        padding-top: 30px;
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        li {
-            display: inline;
-            padding-right: 30px;
-            font-size: 15px;
-            font-weight: bold;
-            a,
-            a:visited,
-            a:focus,
-            a:active {
-                text-decoration: none;
-                color: #CCC;
-            }
-            a:hover {
-                text-decoration: none;
-                color: #999;
-            }
-            a:visited {
-                text-decoration: none;
-            }
-            a:focus {
-                text-decoration: none;
-            }
-            a:link {
-                text-decoration: none;
-            }
-        }
-    }
-}
-
-body {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); 
-    font-family: 'Roboto', sans-serif;
-}
-
 .thumbnail {
     position: relative;
-
     img {
         height: 200px;
         background-size: cover;
@@ -174,16 +76,25 @@ body {
         padding-left: 30px;
     }
 }
+/* @end HOME */
 
-/*----------------------------------------- end home styles -----------------------------------------------------*/
+/* @begin ROUTES ART/SPORTS/MUSIC */
+//Style thumbnails in Home Styles.
 
-
-/*----------------------------------------- search styles -----------------------------------------------------*/
-
-body {
-    background-color: rgb(220, 220, 220);
+.sectionSubHeader {
+    margin-bottom: 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    text-align: center;
 }
+/* @end ROUTES ART/SPORTS/MUSIC */
 
+/* @begin SEARCH / AGENDA */
 
 .event-list {
     list-style: none;
@@ -265,6 +176,20 @@ body {
     }
 }
 
+.event-list {
+    img {
+        height: 40px;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+.pageContent {
+    min-height: 270px;
+}
+
+
+/* estilos predeterminados de la plantilla 'event list' de bootsnip*/
 .event-list>li {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 5px rgb(51, 51, 51);
@@ -498,20 +423,11 @@ div.info {
     }
 }
 
-.event-list {
-    img {
-        height: 40px;
-        background-size: cover;
-        background-position: center center;
-    }
-}
+/* final estilos predeterminados bootsnip*/
 
+/////////////// @end SEARCH / AGENDA ///////////////
 
-
-/*----------------------------------------- end serach styles -----------------------------------------------------*/
-
-
-/*----------------------------------------- start event styles -----------------------------------------------------*/
+/////////////// @begin EVENT INFO ///////////////
 
 .eventCardInfo {
     font-family: 'Roboto', sans-serif;
@@ -576,21 +492,4 @@ p.buyLinks {
         font-style: italic;
     }
 }
-
-
-/*----------------------------------------- end event styles -----------------------------------------------------*/
-
-
-/*----------------------------------------- start Art/Sports/Music styles -----------------------------------------------------*/
-
-.sectionSubHeader {
-    margin-bottom: 30px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-    text-align: center;
-}
+/* @end EVENT INFO */

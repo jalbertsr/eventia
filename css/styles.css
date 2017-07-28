@@ -1,3 +1,8 @@
+body {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  font-family: 'Roboto', sans-serif;
+  background-color: gainsboro; }
+
 header {
   height: 120px;
   background-color: black;
@@ -33,27 +38,6 @@ header {
   .navbar ul li a:focus {
     color: #84fab0 !important; }
 
-.pageContent {
-  min-height: 270px; }
-
-/*----------------------------------------- start home styles -----------------------------------------------------*/
-.search {
-  height: 120px;
-  margin-top: 80px;
-  margin-bottom: 30px; }
-
-.events {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  padding-top: 10px;
-  margin-bottom: 50px; }
-  .events h1 {
-    padding-bottom: 20px;
-    padding-left: 20px;
-    color: white;
-    font-size: 30px;
-    font-weight: bold; }
-
 footer {
   margin-top: 100px;
   height: 150px;
@@ -86,9 +70,23 @@ footer {
       footer ul li a:link {
         text-decoration: none; }
 
-body {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-  font-family: 'Roboto', sans-serif; }
+/* @begin HOME */
+.search {
+  height: 120px;
+  margin-top: 80px;
+  margin-bottom: 30px; }
+
+.events {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding-top: 10px;
+  margin-bottom: 50px; }
+  .events h1 {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold; }
 
 .thumbnail {
   position: relative; }
@@ -126,11 +124,21 @@ body {
 
   nav {
     padding-left: 30px; } }
-/*----------------------------------------- end home styles -----------------------------------------------------*/
-/*----------------------------------------- search styles -----------------------------------------------------*/
-body {
-  background-color: gainsboro; }
+/* @end HOME */
+/* @begin ROUTES ART/SPORTS/MUSIC */
+.sectionSubHeader {
+  margin-bottom: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  text-align: center; }
 
+/* @end ROUTES ART/SPORTS/MUSIC */
+/* @begin SEARCH / AGENDA */
 .event-list {
   list-style: none;
   font-family: 'Roboto', sans-serif;
@@ -195,6 +203,15 @@ body {
     justify-content: center;
     color: white; }
 
+.event-list img {
+  height: 40px;
+  background-size: cover;
+  background-position: center center; }
+
+.pageContent {
+  min-height: 270px; }
+
+/* estilos predeterminados de la plantilla 'event list' de bootsnip*/
 .event-list > li {
   background-color: white;
   box-shadow: 0px 0px 5px #333333;
@@ -392,13 +409,7 @@ div.info a {
   div.info a {
     color: inherit;
     text-decoration: inherit; } }
-.event-list img {
-  height: 40px;
-  background-size: cover;
-  background-position: center center; }
-
-/*----------------------------------------- end serach styles -----------------------------------------------------*/
-/*----------------------------------------- start event styles -----------------------------------------------------*/
+/* final estilos predeterminados bootsnip*/
 .eventCardInfo {
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -442,15 +453,4 @@ p.buyLinks {
   color: white;
   font-style: italic; }
 
-/*----------------------------------------- end event styles -----------------------------------------------------*/
-/*----------------------------------------- start Art/Sports/Music styles -----------------------------------------------------*/
-.sectionSubHeader {
-  margin-bottom: 30px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  text-align: center; }
+/* @end EVENT INFO */
