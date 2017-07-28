@@ -12,15 +12,15 @@ Eventia is a web page that helps you find events and give you information about 
 
 ##### Home screenshot: 
 
-![Screenshot](https://i.gyazo.com/39ba39d8f12a211ade6cf1404340972f.png)
+![Screenshot](img/home.png)
 
 ##### Search results screenshot:
 
-![Screenshot](https://i.gyazo.com/d0ec8000987955b54239dd35386ea931.png)
+![Screenshot](img/search.png)
 
 ##### Card Event Info:
 
-![Screenshot](https://i.gyazo.com/5e2605e6fd3652eda6134bbafc87e75f.png)
+![Screenshot](img/eventCard.png)
 
 ---
 
