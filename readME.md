@@ -6,6 +6,8 @@
 
 ---
 
+### Description
+
 Eventia is a helpful web page that let you search for recent, popular or specific events. Events that range from concert, sports, theater, anything! you can even search for Pizza Parties if that's what you desire. Eventia also give information about the events such as: prices, location, date and hour, box office information and also bring links to pages where you can buy tickets for the event. Awesome stuff!!
 
 ---
