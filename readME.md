@@ -4,7 +4,9 @@
  
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-Eventia is a web page that helps you find events and give you information about it.
+---
+
+Eventia is a helpful web page that let you search for recent, popular or specific events. Events that range from concert, sports, theater, anything! you can even search for Pizza Parties if that's what you desire. Eventia also give information about the events such as: prices, location, date and hour, box office information and also bring links to pages where you can buy tickets for the event. Awesome stuff!!
 
 ---
 
@@ -12,15 +14,15 @@ Eventia is a web page that helps you find events and give you information about 
 
 ##### Home screenshot: 
 
-![Screenshot](https://i.gyazo.com/39ba39d8f12a211ade6cf1404340972f.png)
+![Screenshot](img/home.png)
 
 ##### Search results screenshot:
 
-![Screenshot](https://i.gyazo.com/d0ec8000987955b54239dd35386ea931.png)
+![Screenshot](img/search.png)
 
 ##### Card Event Info:
 
-![Screenshot](https://i.gyazo.com/5e2605e6fd3652eda6134bbafc87e75f.png)
+![Screenshot](img/eventCard.png)
 
 ---
 
